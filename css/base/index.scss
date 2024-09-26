@@ -1,9 +1,3 @@
-@font-face {
-  font-family: JM;
-  src: url(EuclidCircularAVN-Regular.ttf);
-	font-display: swap;
-}
-
 @import 
 	'animation.scss',
 	'grid.scss';
@@ -21,14 +15,14 @@ $grey5: #F4F4F4;
   margin: 0;
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
-	line-height: 1.2;
-	font-family: sans-serif;
+	line-height: normal;
+	font-family: 'Baloo Da 2', sans-serif;
 	scroll-behavior: smooth;
 }
 
 html,
 body {
-  font-size: 14px;
+  font-size: 16px;
   color: $dark;
 }
 
@@ -176,6 +170,18 @@ hr {
   color: $grey1 !important;
 }
 
+.text-pink {
+	color: #F285A8;
+}
+
+.text-green {
+	color: #BDD631;
+}
+
+.text-yellow {
+	color: #FFCB05;
+}
+
 .ml-6 {
 	margin-left: 6px;
 }
@@ -285,6 +291,10 @@ hr {
 	
 	@media (min-width: 1600px) {
 		max-width: 1540px;
+	}
+	
+	@media (min-width: 1900px) {
+		max-width: 1800px;
 	}
 }
 
@@ -443,11 +453,6 @@ hr {
 		color: $grey5;
 	}
 	
-	&.btn-buy {
-		color: $light;
-		background: #E82A00;
-	}
-	
 	&.btn-secondary {
 		background: $grey3;
 	}
@@ -539,93 +544,5 @@ hr {
 		display: inline-block;
 		margin-left: 4px;
 		font-family: sans-serif;
-	}
-}
-
-.scrollable-table {
-	overflow-x: auto;
-	padding-bottom: 6px;
-	
-	&::-webkit-scrollbar {
-		height: 6px;
-	}
-}
-
-.table {
-	width: 100%;
-	white-space: nowrap;
-	border-collapse: collapse;
-	
-	thead {
-		background: $grey3;
-	}
-	
-	th,
-	td {
-		padding: 8px;
-		vertical-align: middle;
-		border: 1px solid $grey4;
-	}
-	
-	tbody tr:hover {
-		background: $grey5;
-	}
-	
-	
-	&.striped-rows {
-		th,
-		td {
-			border: 0;
-		}
-		
-		tbody tr {
-			&:nth-child(even) {
-				background: $grey4;
-			}
-			
-			&:hover {
-				background: none;
-			}
-		}
-	}
-	
-	&.size-table {
-		overflow: hidden;
-		
-		tbody tr:hover {
-			background: none;
-		}
-		
-		td {
-			position: relative;
-			
-			&::before,
-			&::after {
-				position: absolute;
-				pointer-events: none;
-			}
-			
-			&:hover {
-				&::before {
-					content: '';
-					top: 0;
-					width: 500vw;
-					height: 100%;
-					transform: translate(-100vw, 0);
-					background: rgba(0, 0, 0, .1);
-					z-index: 1111111;
-				}
-				
-				&::after {
-					content: '';
-					left: 0;
-					width: 100%;
-					height: 500vh;
-					transform: translate(0, -50vh);
-					background: rgba(0, 0, 0, .1);
-					z-index: 1111111;
-				}
-			}
-		}
 	}
 }
