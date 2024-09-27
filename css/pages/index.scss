@@ -64,8 +64,31 @@
 	}
 	
 	.about {
+		padding: 0 0 120px;
+			
+			
 		.section-title {
 			margin-bottom: 55px;
+		}
+		
+		.age-slider {
+			display: flex;
+			align-items: center;
+			
+			.image {
+				max-width: 80%;
+				flex: 0 0 80%;
+				margin: auto;
+				border-radius: 20px;
+				border: 2.5px solid #1B449C;
+				overflow: hidden;
+				
+				figure {
+					padding-top: calc(9 / 16 * 100%);
+					background: #BBD2FF no-repeat center;
+					background-size: cover;
+				}
+			}
 		}
 	}
 }

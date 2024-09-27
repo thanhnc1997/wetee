@@ -561,7 +561,6 @@ hr {
 .header {
   background: #BBD2FF;
   border-bottom: 2.5px solid #1B449C;
-  position: sticky;
   top: 0;
   left: 0;
   z-index: 1111; }
@@ -635,6 +634,48 @@ hr {
   line-height: 1.5rem;
   color: #1B449C; }
 
+.progress {
+  margin: auto;
+  max-width: 600px;
+  margin-bottom: 55px; }
+  .progress .progress-wrapper {
+    display: flex;
+    border: 2px solid #1B449C;
+    border-radius: 100px;
+    position: relative;
+    overflow: hidden;
+    height: 30px; }
+  .progress .progress-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18%;
+    height: 100%;
+    background: #F285A8; }
+  .progress .text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #1B449C;
+    font-size: 20px; }
+  .progress .step {
+    display: block;
+    flex-grow: 1;
+    border-right: 2px solid #1B449C; }
+    .progress .step:last-child {
+      border: 0; }
+
+.btn-slider {
+  width: 80px;
+  height: 80px;
+  border: 0; }
+  .btn-slider.prev {
+    background: transparent url(../images/common/prev.svg) no-repeat center;
+    background-size: contain; }
+  .btn-slider.next {
+    background: transparent url(../images/common/next.svg) no-repeat center;
+    background-size: contain; }
+
 .home-page .hero {
   padding: 40px 0;
   background: #BBD2FF;
@@ -678,7 +719,23 @@ hr {
     height: 150px;
     background: url(../images/common/wave.png) no-repeat left;
     background-size: cover; }
-.home-page .about .section-title {
-  margin-bottom: 55px; }
+.home-page .about {
+  padding: 0 0 120px; }
+  .home-page .about .section-title {
+    margin-bottom: 55px; }
+  .home-page .about .age-slider {
+    display: flex;
+    align-items: center; }
+    .home-page .about .age-slider .image {
+      max-width: 80%;
+      flex: 0 0 80%;
+      margin: auto;
+      border-radius: 20px;
+      border: 2.5px solid #1B449C;
+      overflow: hidden; }
+      .home-page .about .age-slider .image figure {
+        padding-top: calc(9 / 16 * 100%);
+        background: #BBD2FF no-repeat center;
+        background-size: cover; }
 
 /*# sourceMappingURL=main.css.map */
