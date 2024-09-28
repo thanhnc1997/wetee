@@ -15,8 +15,10 @@ const app = {
 		const width = 33.33;
 
 		function changeAge(i) {
-			ageSlider.querySelector('figure').style.cssText = `background-image: url(images/common/${i}_year.png)`;
 			ageProgressBar.style.cssText = `width: ${width * count}%`;
+			if (i <= 0) ageProgressBar.style.cssText = `width: 18%`;
+			if (i >= 3) ageProgressBar.style.cssText = `width: 100%`;
+			ageSlider.querySelector('figure').style.cssText = `background-image: url(images/common/${i}_year.png)`;
 		}
 		
 		next.addEventListener('click', () => {
@@ -26,10 +28,7 @@ const app = {
 		});
 		
 		prev.addEventListener('click', () => {
-			if (count <= 0) {
-				ageProgressBar.style.cssText = `width: 18%`;
-				return false;
-			}
+			if (count <= 0) return false;
 			count --;
 			changeAge(count);
 		});
