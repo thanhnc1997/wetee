@@ -319,8 +319,9 @@ hr {
 .btn,
 .input,
 .select {
-	padding: 8px 12px;
+	padding: 0 14px;
 	height: 40px;
+	font-size: 16px;
 }
 
 .input,
@@ -431,30 +432,15 @@ hr {
 	text-align: center;
 	cursor: pointer;
 	border-radius: 6px;
-	color: $dark;
+	color: #1B449C;
 	border: 0;
-	font-weight: 500;
 	background: transparent;
 	text-decoration: none;
 	display: inline-block;
 	font-weight: 600;
 	
-	&.btn-light {
-		background: $grey4;
-	}
-	
-	&.btn-primary {
-		color: #03177E;
-		background: #C3E6FF;
-	}
-	
-	&.btn-dark {
-		background: $dark;
-		color: $grey5;
-	}
-	
-	&.btn-secondary {
-		background: $grey3;
+	&.btn-outline {
+		border: 2px solid #1B449C;
 	}
 	
 	&.btn-icon {
@@ -464,21 +450,6 @@ hr {
 		
 		svg {
 			margin-right: 8px;
-		}
-	}
-	
-	&.btn-upload {
-		position: relative;
-		
-		input[type="file"] {
-			position: absolute;
-			top: 0;
-			right: 0;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			cursor: pointer;
-			opacity: 0;
 		}
 	}
 }

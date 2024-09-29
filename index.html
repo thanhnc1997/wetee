@@ -8,6 +8,8 @@
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Baloo+Da+2:wght@400..800&family=Grandstander:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="libs/glide/glide.core.min.css">
+  <link rel="stylesheet" href="libs/glide/glide.theme.min.css">
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
@@ -24,6 +26,10 @@
 					<li><a href="#">Chăm sóc răng xinh</a></li>
 				</ul>
 			</nav>
+			<div class="tool-bar">
+				<button class="btn btn-outline">Tư vấn ngay</button>
+				<button class="btn btn-icon active"><img src="images/icons/cart.svg"></button>
+			</div>
 		</div>
 	</header>
 	<main class="home-page">
@@ -34,6 +40,7 @@
 			</div>
 			<div class="wave-tail"></div>
 		</section>
+		<!-------- Giới thiệu -------->
 		<section class="about">
 			<div class="container">
 				<h2 class="section-title">
@@ -63,6 +70,7 @@
 				<div class="wave-tail" style="top:100%; transform: rotate(180deg);"></div>
 			</div>
 		</section>
+		<!-------- Sản phẩm -------->
 		<section class="products">
 			<div class="container">
 				<div class="section-title">
@@ -72,19 +80,25 @@
 				</div>
 				<div class="grid grid-sm-3">
 					<div class="product">
-						<figure class="image" style="background-image: url(images/products/pink.png)"></figure>
+						<figure class="image">
+							<img src="images/products/pink.png">
+						</figure>
 						<div class="content text-center">
 							<h3 class="text-pink">thỏ hồng</h3>
 						</div>
 					</div>
 					<div class="product">
-						<figure class="image" style="background-image: url(images/products/green.png)"></figure>
+						<figure class="image">
+							<img src="images/products/green.png">
+						</figure>
 						<div class="content text-center">
 							<h3 class="text-green">thỏ xanh</h3>
 						</div>
 					</div>
 					<div class="product">
-						<figure class="image" style="background-image: url(images/products/yellow.png)"></figure>
+						<figure class="image">
+							<img src="images/products/yellow.png">
+						</figure>
 						<div class="content text-center">
 							<h3 class="text-yellow">thỏ vàng</h3>
 						</div>
@@ -92,6 +106,7 @@
 				</div>
 			</div>
 		</section>
+		<!-------- Lý do -------->
 		<section class="reasons">
 			<div class="container">
 				<div class="section-title">
@@ -121,6 +136,7 @@
 				</div>
 			</div>
 		</section>
+		<!-------- Câu chuyện -------->
 		<section class="stories">
 			<div class="container">
 				<div class="section-title">
@@ -129,13 +145,94 @@
 					</h2>
 				</div>
 			</div>
+			<div id="stories" class="glide">
+				<div class="glide__track" data-glide-el="track">
+					<ul class="glide__slides">
+						<li class="glide__slide">
+							<div class="item text-center">
+								<span class="rating"></span>
+								<div class="content">
+									<p>Bạn ý thích đánh răng lắm, toàn đòi cầm bàn chải với ôm lọ gel thôi, mình dùng thêm xịt wetee vị ngọt dễ dungfm đặc biệt không bị hôi miệng nữa</p>
+									<h4>MẸ BÉ SÂU</h4>
+								</div>
+							</div>
+						</li>
+						<li class="glide__slide">
+							<div class="item text-center">
+								<span class="rating"></span>
+								<div class="image" style="background-image: url(images/common/s_2.png)"></div>
+								<div class="content">
+									<p>Bạn ý thích đánh răng lắm, toàn đòi cầm bàn chải với ôm lọ gel thôi, mình dùng thêm xịt wetee vị ngọt dễ dungfm đặc biệt không bị hôi miệng nữa</p>
+									<h4>MẸ BÉ SÂU</h4>
+								</div>
+							</div>
+						</li>
+						<li class="glide__slide">
+							<div class="item text-center">
+								<span class="rating"></span>
+								<div class="content">
+									<p>Bạn ý thích đánh răng lắm, toàn đòi cầm bàn chải với ôm lọ gel thôi, mình dùng thêm xịt wetee vị ngọt dễ dungfm đặc biệt không bị hôi miệng nữa</p>
+									<h4>MẸ BÉ SÂU</h4>
+								</div>
+							</div>
+						</li>
+						<li class="glide__slide">
+							<div class="item text-center">
+								<span class="rating"></span>
+								<div class="image" style="background-image: url(images/common/s_2.png)"></div>
+								<div class="content">
+									<p>Bạn ý thích đánh răng lắm, toàn đòi cầm bàn chải với ôm lọ gel thôi, mình dùng thêm xịt wetee vị ngọt dễ dungfm đặc biệt không bị hôi miệng nữa</p>
+									<h4>MẸ BÉ SÂU</h4>
+								</div>
+							</div>
+						</li>
+						<li class="glide__slide">
+							<div class="item text-center">
+								<span class="rating"></span>
+								<div class="content">
+									<p>Bạn ý thích đánh răng lắm, toàn đòi cầm bàn chải với ôm lọ gel thôi, mình dùng thêm xịt wetee vị ngọt dễ dungfm đặc biệt không bị hôi miệng nữa</p>
+									<h4>MẸ BÉ SÂU</h4>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				
+				<div class="glide__arrows" data-glide-el="controls">
+					<button class="glide__arrow glide__arrow--left btn-slider prev" data-glide-dir="<"></button>
+					<button class="glide__arrow glide__arrow--right btn-slider next" data-glide-dir=">"></button>
+				</div>
+			</div>
+			<div class="wave-tail"></div>
 		</section>
+		<!-------- Blog -------->
 		<section class="blog">
-			<div class="container"></div>
+			<div class="container">
+				<h2 class="section-title mb-18">
+					các chương trình <br><span class="text-pink">sắp diễn ra</span>
+				</h2>
+				<p class="text-center sub-title">
+					Cùng theo dõi các sự kiện sắp diễn ra của Wetee để nhận được <br> những “deal hời” và vô vàn món quà khác của Wetee nhé.
+				</p>
+				
+				<nav class="nav-tab">
+					<span class="tab-item active">Sưu tầm thẻ</span>
+					<span class="tab-item">Hoạt động offline...</span>
+				</nav>
+				<div class="tab-content">
+					<div class="tab-pane active">
+						<div class="grid">
+							<div class="image" style="background-image: url(images/common/blog_1.png)"></div>
+							<div class="content"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</section>
 	</main>
 	<footer class="footer"></footer>
 	
+	<script src="libs/glide/glide.js"></script>
 	<script src="js/main.js"></script>
 </body>
 </html>

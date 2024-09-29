@@ -95,15 +95,13 @@
 		}
 		
 		.product {
-			.image {
-				padding-top: calc(4 / 3 * 100%);
-				background: no-repeat center;
-				background-size: contain;
+			img {
+				width: 100%;
 			}
 			
 			.content {
 				background: $light;
-				margin-top: -4px;
+				margin-top: -10px;
 				padding: 18px 28px 12px;
 				font-size: 42px;
 				text-transform: uppercase;
@@ -113,7 +111,7 @@
 	}
 	
 	.reasons {
-		padding: 60px 0 80px;
+		padding: 20px 0 80px;
 		background: #BBD2FF;
 		
 		.section-title {
@@ -153,13 +151,103 @@
 			
 			p {
 				font-weight: 600;
-				line-height: 28px;
+				line-height: 1.6rem;
 			}
 		}
 	}
 	
 	.stories {
-		padding: 0px 0 80px;
+		padding: 0px 0 160px;
 		background: #BBD2FF;
+		overflow: hidden;
+		position: relative;
+		
+		.section-title {
+			margin-bottom: 66px;
+		}
+		
+		.glide__slide {
+			height: auto;
+		}
+		
+		.item {
+			color: #1B449C;
+			border: 2px solid #1B449C;
+			border-radius: 24px;
+			overflow: hidden;
+			background: $light;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			height: 100%;
+			position: relative;
+			
+			.image {
+				border-radius: 24px;
+				padding-top: calc(9 / 16 * 100%);
+				background: #BBD2FF no-repeat center;
+				background-size: cover;
+				border-bottom: 2px solid #1B449C;
+				margin-bottom: 28px;
+			}
+			
+			.rating {
+				position: absolute;
+				top: 20px;
+				left: 50%;
+				transform: translate(-50%, 0);
+				width: 60%;
+				height: 30px;
+				background: url(../images/stars/rating.svg) no-repeat center;
+				background-size: contain;
+			}
+			
+			.content {
+				font-weight: 600;
+				padding: 0 40px 28px;
+				font-size: 20px;
+				
+				p {
+					line-height: 1.6rem;
+					margin-bottom: 28px;
+				}
+				
+				h4 {
+					text-transform: uppercase;
+					font-size: 22px;
+				}
+			}
+		}
+		
+		.wave-tail {
+			background: url(../images/common/curve_white.png) no-repeat center;
+			background-size: cover;
+			height: 60px;
+		}
+	}
+	
+	.blog {
+		background: $light;
+		padding: 80px 0 100px;
+		
+		.sub-title {
+			font-size: 20px;
+			line-height: 1.6rem;
+			margin-bottom: 80px;
+		}
+		
+		.tab-pane {
+			.grid {
+				grid-template: auto / 1fr 35%;
+				grid-gap: 20px;
+			}
+			
+			.image {
+				padding-top: calc(3 / 4 * 100%);
+				background: #E1EBFF no-repeat center;
+				background-size: cover;
+				border-radius: 18px;
+			}
+		}
 	}
 }

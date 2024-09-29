@@ -521,8 +521,9 @@ hr {
 .btn,
 .input,
 .select {
-  padding: 8px 12px;
+  padding: 0 14px;
   height: 40px;
+  font-size: 16px;
 }
 
 .input,
@@ -620,27 +621,15 @@ hr {
   text-align: center;
   cursor: pointer;
   border-radius: 6px;
-  color: #222222;
+  color: #1B449C;
   border: 0;
-  font-weight: 500;
   background: transparent;
   text-decoration: none;
   display: inline-block;
   font-weight: 600;
 }
-.btn.btn-light {
-  background: #E1E1E1;
-}
-.btn.btn-primary {
-  color: #03177E;
-  background: #C3E6FF;
-}
-.btn.btn-dark {
-  background: #222222;
-  color: #F4F4F4;
-}
-.btn.btn-secondary {
-  background: #D9D9D9;
+.btn.btn-outline {
+  border: 2px solid #1B449C;
 }
 .btn.btn-icon {
   display: inline-flex;
@@ -649,19 +638,6 @@ hr {
 }
 .btn.btn-icon svg {
   margin-right: 8px;
-}
-.btn.btn-upload {
-  position: relative;
-}
-.btn.btn-upload input[type=file] {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  cursor: pointer;
-  opacity: 0;
 }
 
 .overlay {
@@ -761,6 +737,9 @@ hr {
   background-size: 100%;
   height: 30px;
 }
+.header nav {
+  margin-right: auto;
+}
 .header nav ul {
   display: flex;
   align-items: center;
@@ -774,7 +753,7 @@ hr {
   }
 }
 .header nav a {
-  padding: 12px 46px 12px 24px;
+  padding: 12px 42px 12px 24px;
   color: #1B449C;
   font-weight: 600;
   position: relative;
@@ -786,7 +765,7 @@ hr {
   display: none;
   position: absolute;
   top: 50%;
-  right: 24px;
+  right: 20px;
   transform: translate(0, -50%);
   width: 14px;
   height: 14px;
@@ -806,6 +785,25 @@ hr {
 }
 .header nav a.active::after {
   display: block;
+}
+.header .tool-bar {
+  display: flex;
+  align-items: center;
+}
+.header .tool-bar .btn-icon {
+  position: relative;
+  margin-left: 8px;
+}
+.header .tool-bar .btn-icon.active::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  right: 8px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  background: #FF008A;
+  border-radius: 50%;
 }
 
 .section-title {
@@ -828,12 +826,13 @@ hr {
 }
 .section-title .wrapper p {
   margin: 0 40px;
+  font-size: 56px;
 }
 .section-title .wrapper::before, .section-title .wrapper::after {
   content: "";
   display: block;
-  width: 60px;
-  height: 60px;
+  width: 40px;
+  height: 40px;
   background: no-repeat center;
   background-size: contain;
 }
@@ -898,6 +897,7 @@ hr {
   width: 80px;
   height: 80px;
   border: 0;
+  box-shadow: none;
 }
 .btn-slider.prev {
   background: transparent url(../images/common/prev.svg) no-repeat center;
@@ -906,6 +906,55 @@ hr {
 .btn-slider.next {
   background: transparent url(../images/common/next.svg) no-repeat center;
   background-size: contain;
+}
+
+.glide__track {
+  padding: 10px 0;
+}
+
+.nav-tab {
+  display: flex;
+}
+.nav-tab .tab-item {
+  color: #1B449C;
+  background: #E1EBFF;
+  border: 3px solid #1B449C;
+  border-right: 0;
+  border-bottom: 0;
+  border-radius: 14px 14px 0 0;
+  padding: 10px 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 20px;
+  cursor: pointer;
+}
+.nav-tab .tab-item:last-child {
+  border-right: 3px solid #1B449C;
+}
+.nav-tab .tab-item.active {
+  background: #FFFFFF;
+  position: relative;
+}
+.nav-tab .tab-item.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  border-bottom: 4px solid #FFFFFF;
+}
+
+.tab-content {
+  border: 3px solid #1B449C;
+  border-radius: 28px;
+  border-top-left-radius: 0;
+}
+.tab-content .tab-pane {
+  display: none;
+  padding: 18px;
+}
+.tab-content .tab-pane.active {
+  display: block;
 }
 
 .home-page .hero {
@@ -986,21 +1035,19 @@ hr {
 .home-page .products .section-title {
   margin-bottom: 70px;
 }
-.home-page .products .product .image {
-  padding-top: 133.3333333333%;
-  background: no-repeat center;
-  background-size: contain;
+.home-page .products .product img {
+  width: 100%;
 }
 .home-page .products .product .content {
   background: #FFFFFF;
-  margin-top: -4px;
+  margin-top: -10px;
   padding: 18px 28px 12px;
   font-size: 42px;
   text-transform: uppercase;
   border-radius: 0 0 28px 28px;
 }
 .home-page .reasons {
-  padding: 60px 0 80px;
+  padding: 20px 0 80px;
   background: #BBD2FF;
 }
 .home-page .reasons .section-title {
@@ -1035,11 +1082,86 @@ hr {
 }
 .home-page .reasons .item p {
   font-weight: 600;
-  line-height: 28px;
+  line-height: 1.6rem;
 }
 .home-page .stories {
-  padding: 0px 0 80px;
+  padding: 0px 0 160px;
   background: #BBD2FF;
+  overflow: hidden;
+  position: relative;
+}
+.home-page .stories .section-title {
+  margin-bottom: 66px;
+}
+.home-page .stories .glide__slide {
+  height: auto;
+}
+.home-page .stories .item {
+  color: #1B449C;
+  border: 2px solid #1B449C;
+  border-radius: 24px;
+  overflow: hidden;
+  background: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+}
+.home-page .stories .item .image {
+  border-radius: 24px;
+  padding-top: 56.25%;
+  background: #BBD2FF no-repeat center;
+  background-size: cover;
+  border-bottom: 2px solid #1B449C;
+  margin-bottom: 28px;
+}
+.home-page .stories .item .rating {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 60%;
+  height: 30px;
+  background: url(../images/stars/rating.svg) no-repeat center;
+  background-size: contain;
+}
+.home-page .stories .item .content {
+  font-weight: 600;
+  padding: 0 40px 28px;
+  font-size: 20px;
+}
+.home-page .stories .item .content p {
+  line-height: 1.6rem;
+  margin-bottom: 28px;
+}
+.home-page .stories .item .content h4 {
+  text-transform: uppercase;
+  font-size: 22px;
+}
+.home-page .stories .wave-tail {
+  background: url(../images/common/curve_white.png) no-repeat center;
+  background-size: cover;
+  height: 60px;
+}
+.home-page .blog {
+  background: #FFFFFF;
+  padding: 80px 0 100px;
+}
+.home-page .blog .sub-title {
+  font-size: 20px;
+  line-height: 1.6rem;
+  margin-bottom: 80px;
+}
+.home-page .blog .tab-pane .grid {
+  grid-template: auto/1fr 35%;
+  grid-gap: 20px;
+}
+.home-page .blog .tab-pane .image {
+  padding-top: 75%;
+  background: #E1EBFF no-repeat center;
+  background-size: cover;
+  border-radius: 18px;
 }
 
 /*# sourceMappingURL=main.css.map */

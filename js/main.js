@@ -32,6 +32,24 @@ const app = {
 			count --;
 			changeAge(count);
 		});
+		
+		// stories slider
+		let glide = new Glide('#stories', {
+			type: 'carousel',
+			perView: 4,
+			focusAt: 'center',
+			gap: 20,
+			breakpoints: {
+				667: {
+					perView: 3
+				},
+				480: {
+					perView: 1
+				}
+			}
+		});
+		
+		glide.mount();
 	}
 }
 
