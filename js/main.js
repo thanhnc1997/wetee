@@ -1,7 +1,21 @@
 const template = document.body;
 
 const app = {
-	common() {},
+	common: {
+		navTab() {
+			let navItemList = template.querySelectorAll('.tab-item');
+			navItemList.forEach(item => {
+				item.addEventListener('click', () => {
+					let tabParent = item.parentElement.parentElement;
+					let tabContentId = item.getAttribute('data-tab');
+					tabParent.querySelector('.tab-item.active').classList.remove('active');
+					tabParent.querySelector('.tab-pane.active').classList.remove('active');
+					template.querySelector(tabContentId).classList.add('active');
+					item.classList.add('active');
+				});
+			});
+		}
+	},
 	home() {
 		const homePage = template.querySelector('.home-page');
 		let count = 0;
@@ -54,3 +68,4 @@ const app = {
 }
 
 app.home();
+app.common.navTab();

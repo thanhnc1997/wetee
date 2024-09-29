@@ -443,6 +443,12 @@ hr {
 		border: 2px solid #1B449C;
 	}
 	
+	&.btn-yellow {
+		color: #1B449C;
+		background: #FFCB05;
+		box-shadow: 4px 4px 0 0 #1B449C;
+	}
+	
 	&.btn-icon {
 		display: inline-flex;
 		align-items: center;

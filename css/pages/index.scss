@@ -95,6 +95,8 @@
 		}
 		
 		.product {
+			cursor: pointer;
+			
 			img {
 				width: 100%;
 			}
@@ -228,7 +230,8 @@
 	
 	.blog {
 		background: $light;
-		padding: 80px 0 100px;
+		padding: 80px 0 320px;
+		position: relative;
 		
 		.sub-title {
 			font-size: 20px;
@@ -238,7 +241,7 @@
 		
 		.tab-pane {
 			.grid {
-				grid-template: auto / 1fr 35%;
+				grid-template: auto / 1fr 30%;
 				grid-gap: 20px;
 			}
 			
@@ -248,6 +251,35 @@
 				background-size: cover;
 				border-radius: 18px;
 			}
+			
+			.content {
+				display: flex;
+				flex-direction: column;
+				padding: 28px 0;
+				
+				h4 {
+					font-size: 32px;
+					color: #1B449C;
+					text-transform: uppercase;
+					margin-bottom: 24px;
+					font-family: 'Grandstander', cursive;
+				}
+				
+				p {
+					margin-bottom: auto;
+				}
+				
+				.btn {
+					font-size: 24px;
+					width: 100%;
+				}
+			}
+		}
+		
+		.wave-tail {
+			background: url(../images/common/curve_blue.png) no-repeat center;
+			background-size: cover;
+			height: 90px;
 		}
 	}
 }
