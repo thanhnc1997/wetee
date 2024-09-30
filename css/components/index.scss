@@ -60,7 +60,7 @@
 		}
 		
 		a {
-			padding: 12px 42px 12px 24px;
+			padding: 6px 42px 6px 24px;
 			color: #1B449C;
 			font-weight: 600;
 			position: relative;
@@ -113,7 +113,7 @@
 					content: '';
 					position: absolute;
 					top: 6px;
-					right: 8px;
+					right: 16px;
 					display: block;
 					width: 12px;
 					height: 12px;
@@ -139,16 +139,16 @@
 	}
 	
 	.container {
-		padding-bottom: 80px;
+		padding-bottom: 60px;
 	}
 	
 	.grid {
-		grid-template: auto / 30% 1fr 25%;
-		grid-gap: 80px;
+		grid-template: auto / 30% 1fr 28%;
+		grid-gap: 60px;
 	}
 	
 	.logo {
-		max-width: 150px;
+		max-width: 196px;
 		margin-bottom: 40px;
 	}
 	
@@ -156,8 +156,9 @@
 		background: $light;
 		display: flex;
 		align-items: center;
-		border-radius: 6px;
+		border-radius: 10px;
 		margin-bottom: 40px;
+		border: 2px solid #2D2C74 !important;
 		
 		input {
 			border: 0;
@@ -168,18 +169,24 @@
 		
 		.btn {
 			box-shadow: none;
+			padding: 12px 24px;
+			border-left: 2px solid #2D2C74 !important;
 			border: 0;
 		}
 	}
 }
 
+.granstander-font {
+	font-family: 'Grandstander', cursive !important;
+}
+
 .section-title {
 	text-transform: uppercase;
 	font-family: 'Grandstander', cursive;
-	font-weight: 600;
+	font-weight: 700;
 	font-size: 56px;
 	text-align: center;
-	line-height: 1.5rem;
+	// line-height: 1.5rem;
 	color: #1B449C;
 	
 	.wrapper {
@@ -224,7 +231,7 @@
 
 .progress {
 	margin: auto;
-	max-width: 600px;
+	max-width: 630px;
 	margin-bottom: 55px;
 	
 	.progress-wrapper {
@@ -233,7 +240,7 @@
 		border-radius: 100px;
 		position: relative;
 		overflow: hidden;
-		height: 30px;
+		height: 20px;
 	}
 	
 	.progress-bar {
@@ -269,7 +276,7 @@
 
 .wave-tail {
 	position: absolute;
-	bottom: 0;
+	bottom: -2px;
 	left: 0;
 	width: 100%;
 	height: 150px;
@@ -305,21 +312,22 @@
 		color: #1B449C;
 		background: #E1EBFF;
 		border: 3px solid #1B449C;
-		border-right: 0;
 		border-bottom: 0;
-		// border-radius: 14px 14px 0 0;
-		padding: 10px 14px;
+		border-radius: 14px 14px 0 0;
+		padding: 10px 14px 6px;
 		text-transform: uppercase;
-		font-weight: 600;
+		font-weight: 700;
 		font-size: 20px;
 		cursor: pointer;
-		
+		margin-right: 4px;
+		font-family: 'Grandstander', cursive;
+		/*
 		&:first-child {
 			border-top-left-radius: 14px;
 		}
-		
+		*/
 		&:last-child {
-			border-top-right-radius: 14px;
+			// border-top-right-radius: 14px;
 			border-right: 3px solid #1B449C;
 		}
 		
@@ -330,10 +338,10 @@
 			&::after {
 				content: '';
 				position: absolute;
-				bottom: -2px;
+				bottom: -4px;
 				left: 0;
 				width: 100%;
-				border-bottom: 4px solid $light;
+				border-bottom: 10px solid $light;
 			}
 		}
 	}
