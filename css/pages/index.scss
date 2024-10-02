@@ -222,12 +222,16 @@
 		}
 		
 		.item {
-			font-size: 24px;
+			font-size: 18px;
 			color: #1B449C;
 			text-align: center;
 			padding: 14px 14px 34px;
 			transition: .15s;
 			border-radius: 400px;
+			
+			@media (min-width: 1024px) {
+				font-size: 24px;
+			}
 			
 			&:hover {
 				background: #FFCB05;
