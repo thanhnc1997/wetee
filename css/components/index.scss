@@ -311,7 +311,10 @@
 		align-items: center;
 		justify-content: space-between;
 		color: #1B449C;
-		font-size: 20px;
+		
+		@media (min-width: 1024px) {
+			font-size: 20px;
+		}
 	}
 	
 	.step {

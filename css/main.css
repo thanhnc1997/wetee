@@ -989,7 +989,11 @@ hr {
   align-items: center;
   justify-content: space-between;
   color: #1B449C;
-  font-size: 20px;
+}
+@media (min-width: 1024px) {
+  .progress .text {
+    font-size: 20px;
+  }
 }
 .progress .step {
   display: block;
@@ -1313,11 +1317,12 @@ hr {
 }
 .home-page .reasons .list {
   border: 5px solid #FFFFFF;
-  border-radius: 80px;
+  border-radius: 28px;
   padding: 80px 20px 40px;
 }
 @media (min-width: 1024px) {
   .home-page .reasons .list {
+    border-radius: 80px;
     padding: 140px 80px 80px;
   }
 }
