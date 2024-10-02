@@ -847,6 +847,12 @@ hr {
   top: 0;
   left: 12%;
   transform: translate(0, -85%);
+  width: 68%;
+}
+@media (min-width: 1024px) {
+  .footer .mascot {
+    width: auto;
+  }
 }
 .footer .container {
   padding-bottom: 60px;
@@ -1423,8 +1429,13 @@ hr {
 }
 .home-page .blog {
   background: #FFFFFF;
-  padding: 80px 0 320px;
+  padding: 80px 0 180px;
   position: relative;
+}
+@media (min-width: 1024px) {
+  .home-page .blog {
+    padding: 80px 0 300px;
+  }
 }
 .home-page .blog .sub-title {
   font-size: 20px;
@@ -1474,9 +1485,12 @@ hr {
   width: 100%;
 }
 .home-page .blog .wave-tail {
-  background: url(../images/common/curve_blue.png) no-repeat center;
-  background-size: cover;
-  height: 90px;
+  background: none;
+  height: auto;
+  bottom: -10px;
+}
+.home-page .blog .wave-tail img {
+  width: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */

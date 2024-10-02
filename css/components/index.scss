@@ -154,6 +154,11 @@
 		top: 0;
 		left: 12%;
 		transform: translate(0, -85%);
+		width: 68%;
+		
+		@media (min-width: 1024px) {
+			width: auto;
+		}
 	}
 	
 	.container {
