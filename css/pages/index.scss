@@ -324,9 +324,13 @@
 		}
 		
 		.wave-tail {
-			background: url(../images/common/curve_white.png) no-repeat center;
-			background-size: cover;
-			height: 60px;
+			background: none;
+			height: auto;
+			bottom: -10px;
+			
+			img {
+				width: 100%;
+			}
 		}
 	}
 	
