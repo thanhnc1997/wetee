@@ -54,11 +54,14 @@ const app = {
 			focusAt: 'center',
 			gap: 20,
 			breakpoints: {
+				1024: {
+					perView: 4
+				},
 				667: {
-					perView: 3
+					perView: 2
 				},
 				480: {
-					perView: 1
+					perView: 2
 				}
 			}
 		});

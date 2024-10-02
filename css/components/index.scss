@@ -10,11 +10,20 @@
 		display: flex;
 		align-items: center;
 	}
+	.nav-trigger {
+		@media (min-width: 1280px) {
+			display: none;
+		} 
+	}
 	
 	.logo {
 		margin-right: auto;
 		padding: 28px 8px;
 		position: relative;
+		
+		@media (min-width: 1280px) {
+			margin-right: 8%;
+		}
 		
 		img {
 			max-width: 150px;
@@ -44,7 +53,16 @@
 	}
 	
 	nav {
-		margin-right: auto;
+		display: none;
+		position: absolute;
+		
+		@media (min-width: 1280px) {
+			position: static;
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			flex-grow: 1;
+		}
 		
 		ul {
 			display: flex;
@@ -54,7 +72,7 @@
 		li {
 			margin: 0;
 			
-			@media (min-width: 1200px) {
+			@media (min-width: 1280px) {
 				margin: 0 4px;
 			}
 		}
@@ -143,8 +161,11 @@
 	}
 	
 	.grid {
-		grid-template: auto / 30% 1fr 28%;
 		grid-gap: 60px;
+		
+		@media (min-width: 1024px) {
+			grid-template: auto / 30% 1fr 28%;
+		}
 	}
 	
 	.logo {
@@ -174,6 +195,12 @@
 			border: 0;
 		}
 	}
+	
+	.fc-2 {
+		@media (min-width: 1024px) {
+			padding-left: 25%;
+		}
+	}
 }
 
 .granstander-font {
@@ -184,33 +211,50 @@
 	text-transform: uppercase;
 	font-family: 'Grandstander', cursive;
 	font-weight: 700;
-	font-size: 56px;
+	font-size: 28px;
 	text-align: center;
 	// line-height: 1.5rem;
 	color: #1B449C;
+	@media (min-width: 1024px) {
+		font-size: 56px;
+	}
 	
 	.wrapper {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		padding: 0 60px;
+		padding: 0 18px;
 		background: $light;
 		border: 2px solid #1B449C;
 		border-radius: 40px;
 		
+		@media (min-width: 1024px) {
+			padding: 0 60px;
+		}
+		
 		p {
-			margin: 0 40px;
-			font-size: 56px;
+			margin: 0 10px;
+			font-size: 28px;
+			
+			@media (min-width: 1024px) {
+				font-size: 56px;
+				margin: 0 40px;
+			}
 		}
 		
 		&::before,
 		&::after {
 			content: '';
 			display: block;
-			width: 40px;
-			height: 40px;
+			width: 20px;
+			height: 20px;
 			background: no-repeat center;
 			background-size: contain;
+			
+			@media (min-width: 1024px) {
+				width: 40px;
+				height: 40px;
+			}
 		}
 		
 		&.yellow {
@@ -231,8 +275,12 @@
 
 .progress {
 	margin: auto;
-	max-width: 630px;
+	max-width: 95%;
 	margin-bottom: 55px;
+	
+	@media (min-width: 1024px) {
+		max-width: 630px;
+	}
 	
 	.progress-wrapper {
 		display: flex;
@@ -279,16 +327,25 @@
 	bottom: -2px;
 	left: 0;
 	width: 100%;
-	height: 150px;
+	height: 120px;
 	background: url(../images/common/wave.png) no-repeat left;
 	background-size: cover;
+	
+	@media (min-width: 1024px) {
+		height: 150px;
+	}
 }
 
 .btn-slider {
-	width: 80px;
-	height: 80px;
+	width: 46px;
+	height: 46px;
 	border: 0;
 	box-shadow: none;
+	
+	@media (min-width: 1024px) {
+		width: 80px;
+		height: 80px;
+	}
 	
 	&.prev {
 		background: transparent url(../images/common/prev.svg) no-repeat center;
@@ -317,10 +374,14 @@
 		padding: 10px 14px 6px;
 		text-transform: uppercase;
 		font-weight: 700;
-		font-size: 20px;
+		font-size: 14px;
 		cursor: pointer;
 		margin-right: 4px;
 		font-family: 'Grandstander', cursive;
+		
+		@media (min-width: 1024px) {
+			font-size: 20px;
+		}
 		/*
 		&:first-child {
 			border-top-left-radius: 14px;
@@ -371,6 +432,15 @@
 		
 		&:last-child {
 			margin: 0;
+		}
+	}
+	
+	&.vertical {
+		flex-direction: column;
+		
+		a {
+			margin-right: 0;
+			margin-bottom: 14px;
 		}
 	}
 }

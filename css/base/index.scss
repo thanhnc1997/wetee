@@ -316,6 +316,12 @@ hr {
 	}
 }
 
+.no-sp {
+	@media (max-width: 1024px) {
+		display: none;
+	}
+}
+
 .btn,
 .input,
 .select {

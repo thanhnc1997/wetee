@@ -25,18 +25,23 @@
 					<li><a href="#">Sản phẩm</a></li>
 					<li><a href="#">Chăm sóc răng xinh</a></li>
 				</ul>
+				
+				<div class="tool-bar">
+					<button class="btn btn-outline">Tư vấn ngay</button>
+					<button class="btn btn-icon active"><img src="images/icons/cart.svg"></button>
+				</div>
 			</nav>
-			<div class="tool-bar">
-				<button class="btn btn-outline">Tư vấn ngay</button>
-				<button class="btn btn-icon active"><img src="images/icons/cart.svg"></button>
-			</div>
+			<button class="btn nav-trigger"><img src="images/icons/hamburger.svg"></button>
 		</div>
 	</header>
 	<main class="home-page">
 		<section class="hero">
 			<div class="container">
 				<div class="hero-image"><figure></figure></div>
-				<div class="hero-title-image"><img src="images/common/hero_title.svg"></div>
+				<div class="hero-title-image">
+					<img class="no-sp" src="images/common/hero_title.svg">
+					<img class="no-pc" src="images/common/hero_title_mobile.svg">
+				</div>
 			</div>
 			<div class="wave-tail"></div>
 		</section>
@@ -61,11 +66,13 @@
 					</div>
 				</div>
 				<div class="age-slider">
-					<button class="btn-slider prev"></button>
 					<div class="image">
 						<figure style="background-image: url(images/common/0_year.png)"></figure>
 					</div>
-					<button class="btn-slider next"></button>
+					<nav>
+						<button class="btn-slider prev"></button>
+						<button class="btn-slider next"></button>
+					</nav>
 				</div>
 				<div class="wave-tail" style="top:100%; transform: rotate(180deg);"></div>
 			</div>
@@ -84,7 +91,7 @@
 							<img src="images/products/pink.png">
 						</figure>
 						<div class="content text-center">
-							<h3 class="text-pink">thỏ hồng</h3>
+							<h3 class="text-pink granstander-font">thỏ hồng</h3>
 						</div>
 					</div>
 					<div class="product">
@@ -92,7 +99,7 @@
 							<img src="images/products/green.png">
 						</figure>
 						<div class="content text-center">
-							<h3 class="text-green">thỏ xanh</h3>
+							<h3 class="text-green granstander-font">thỏ xanh</h3>
 						</div>
 					</div>
 					<div class="product">
@@ -100,7 +107,7 @@
 							<img src="images/products/yellow.png">
 						</figure>
 						<div class="content text-center">
-							<h3 class="text-yellow">thỏ vàng</h3>
+							<h3 class="text-yellow granstander-font">thỏ vàng</h3>
 						</div>
 					</div>
 				</div>
@@ -115,7 +122,7 @@
 					</h2>
 				</div>
 				<div class="list">
-					<div class="grid grid-sm-2 grid-md-4">
+					<div class="grid grid-2 grid-md-4">
 						<div class="item text-center">
 							<div class="image" style="background-image: url(images/common/r_1.png)"></div>
 							<p>Công thức<br> độc quyền,<br> an toàn</p>
@@ -262,7 +269,7 @@
 					<p class="mb-4">089 6622 486</p>
 					<p class="mb-4">Contact@wetee.vn</p>
 				</div>
-				<div class="footer-col" style="padding-left: 25%;">
+				<div class="footer-col fc-2">
 					<h4 class="text-uppercase mb-28">Chính sách</h4>
 					<p class="mb-4">Chính sách đổi trả</p>
 					<p class="mb-4">Chính sách bảo mật</p>
@@ -287,6 +294,13 @@
 			</div>
 		</div>
 	</footer>
+	<div class="link-list vertical" style="position: fixed; right: 28px; bottom: 40px; z-index: 11;">
+		<a href="#"><img src="images/icons/insta.svg"></a>
+		<a href="#"><img src="images/icons/zalo.svg"></a>
+		<a href="#"><img src="images/icons/messenger.svg"></a>
+		<a href="#"><img src="images/icons/facebook.svg"></a>
+		<a href="#"><img src="images/icons/tiktok.svg"></a>
+	</div>
 	
 	<script src="libs/glide/glide.js"></script>
 	<script src="js/main.js"></script>
