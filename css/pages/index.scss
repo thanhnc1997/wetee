@@ -286,7 +286,6 @@
 				background: #BBD2FF no-repeat center;
 				background-size: cover;
 				border-bottom: 2px solid #1B449C;
-				margin-bottom: 28px;
 				
 				@media (min-width: 1024px) {
 					padding-top: calc(9 / 16 * 100%);
@@ -306,7 +305,7 @@
 			
 			.content {
 				font-weight: 600;
-				padding: 0 40px 100px;
+				padding: 28px 40px 100px;
 				font-size: 20px;
 				display: flex;
 				flex-direction: column;

@@ -712,7 +712,7 @@ hr {
 
 .header {
   background: #BBD2FF;
-  border-bottom: 2px solid #1B449C;
+  border-bottom: 2.5px solid #1B449C;
   top: 0;
   left: 0;
   z-index: 1111;
@@ -1392,7 +1392,6 @@ hr {
   background: #BBD2FF no-repeat center;
   background-size: cover;
   border-bottom: 2px solid #1B449C;
-  margin-bottom: 28px;
 }
 @media (min-width: 1024px) {
   .home-page .stories .item .image {
@@ -1411,7 +1410,7 @@ hr {
 }
 .home-page .stories .item .content {
   font-weight: 600;
-  padding: 0 40px 100px;
+  padding: 28px 40px 100px;
   font-size: 20px;
   display: flex;
   flex-direction: column;
