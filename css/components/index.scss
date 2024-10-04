@@ -72,6 +72,8 @@
 		height: calc(100% - 99px);
 		background: #BBD2FF;
 		padding: 90px 34px 0;
+		z-index: 11;
+		border-top: 1px solid #1B449C;
 		
 		@media (min-width: 1280px) {
 			position: static;
@@ -82,6 +84,7 @@
 			height: auto;
 			padding: 0;
 			display: flex !important;
+			border: 0;
 		}
 		
 		&.active {
@@ -107,7 +110,7 @@
 		a {
 			display: block;
 			text-align: center;
-			padding: 6px 42px 6px 24px;
+			padding: 6px ;
 			color: #1B449C;
 			font-weight: 600;
 			position: relative;
@@ -121,6 +124,7 @@
 				font-size: 16px;
 				margin-bottom: 0;
 				border: 0;
+				padding: 6px 42px 6px 24px;
 			}
 			
 			&::after {
@@ -245,6 +249,22 @@
 			padding-left: 25%;
 		}
 	}
+	
+	.footer-col {
+		text-align: center;
+		
+		@media (min-width: 1024px) {
+			text-align: left;
+		}
+	}
+	
+	.link-list {
+		justify-content: center;
+		
+		@media (min-width: 1024px) {
+			justify-content: flex-start;
+		}
+	}
 }
 
 .granstander-font {
@@ -255,11 +275,16 @@
 	text-transform: uppercase;
 	font-family: 'Grandstander', cursive;
 	font-weight: 700;
-	font-size: 26px;
+	font-size: 25px;
 	text-align: center;
 	// line-height: 1.5rem;
 	color: #1B449C;
-	@media (min-width: 1024px) {
+	
+	@media (min-width: 390px) {
+		font-size: 28px;
+	}
+	
+	@media (min-width: 768px) {
 		font-size: 56px;
 	}
 	
@@ -278,9 +303,13 @@
 		
 		p {
 			margin: 0 10px;
-			font-size: 26px;
+			font-size: 25px;
 			
-			@media (min-width: 1024px) {
+			@media (min-width: 390px) {
+				font-size: 28px;
+			}
+			
+			@media (min-width: 768px) {
 				font-size: 56px;
 				margin: 0 40px;
 			}
@@ -495,6 +524,50 @@
 		
 		a {
 			margin-right: 0;
+		}
+	}
+}
+
+.intro {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: $light;
+	z-index: 1111111111;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	
+	img {
+		margin-bottom: 14px;
+		max-width: 200px;
+	}
+	
+	.loading {
+		width: 100%;
+		max-width: 80%;
+		height: 15px;
+		overflow: hidden;
+		border-radius: 100px;
+		border: 2px solid #1B449C;
+		background: $light;
+		position: relative;
+		
+		@media (min-width: 667px) {
+			max-width: 350px;
+		}
+		
+		.bar {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			background: #1B449C;
+			width: 0;
+			transition: .15s;
 		}
 	}
 }

@@ -256,10 +256,14 @@
 	}
 	
 	.stories {
-		padding: 0px 0 160px;
+		padding: 0px 0 60px;
 		background: #BBD2FF;
 		overflow: hidden;
 		position: relative;
+		
+		@media (min-width: 1024px) {
+			padding: 0px 0 160px;
+		}
 		
 		.section-title {
 			margin-bottom: 66px;
@@ -352,7 +356,7 @@
 	
 	.blog {
 		background: $light;
-		padding: 80px 0 180px;
+		padding: 20px 0 180px;
 		position: relative;
 		
 		@media (min-width: 1024px) {

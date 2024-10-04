@@ -25,6 +25,23 @@ const app = {
 				mainNav.classList.toggle('active');
 				template.classList.toggle('overflow-hidden');
 			});
+		},
+		intro() {
+			let intro = template.querySelector('.intro');
+			if (!intro) return false;
+			let width = 20;
+			let count = 1;
+			
+			function loading() {
+				count ++;
+				intro.querySelector('.bar').style.cssText = `width: ${width * count}%`;
+				if (width * count >= 100) {
+					intro.remove();
+					clearInterval(loadingInterval);
+				}
+			}
+			
+			let loadingInterval = setInterval(() => {loading()}, 800);
 		}
 	},
 	home() {
@@ -90,3 +107,4 @@ const app = {
 app.home();
 app.common.navTab();
 app.common.menu();
+app.common.intro();
