@@ -14,6 +14,17 @@ const app = {
 					item.classList.add('active');
 				});
 			});
+		},
+		menu() {
+			let pageHeader = template.querySelector('.header');
+			let navTrigger = pageHeader.querySelector('.nav-trigger');
+			let mainNav = pageHeader.querySelector('nav');
+			
+			navTrigger.addEventListener('click', () => {
+				navTrigger.classList.toggle('trigger');
+				mainNav.classList.toggle('active');
+				template.classList.toggle('overflow-hidden');
+			});
 		}
 	},
 	home() {
@@ -21,12 +32,12 @@ const app = {
 		let count = 0;
 
 		// age slider
-		const ageSlider = homePage.querySelector('.about .age-slider');
-		const ageProgress = homePage.querySelector('.about .progress');
-		const ageProgressBar = ageProgress.querySelector('.progress-bar');
-		const prev = homePage.querySelector('.about .prev');
-		const next = homePage.querySelector('.about .next');
-		const width = 33.33;
+		let ageSlider = homePage.querySelector('.about .age-slider');
+		let ageProgress = homePage.querySelector('.about .progress');
+		let ageProgressBar = ageProgress.querySelector('.progress-bar');
+		let prev = homePage.querySelector('.about .prev');
+		let next = homePage.querySelector('.about .next');
+		let width = 33.33;
 
 		function changeAge(i) {
 			ageProgressBar.style.cssText = `width: ${width * count}%`;
@@ -78,3 +89,4 @@ const app = {
 
 app.home();
 app.common.navTab();
+app.common.menu();
