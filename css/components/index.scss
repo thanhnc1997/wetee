@@ -216,7 +216,7 @@
 	text-transform: uppercase;
 	font-family: 'Grandstander', cursive;
 	font-weight: 700;
-	font-size: 25px;
+	font-size: 26px;
 	text-align: center;
 	// line-height: 1.5rem;
 	color: #1B449C;
@@ -239,7 +239,7 @@
 		
 		p {
 			margin: 0 10px;
-			font-size: 25px;
+			font-size: 26px;
 			
 			@media (min-width: 1024px) {
 				font-size: 56px;
@@ -335,9 +335,15 @@
 	bottom: -2px;
 	left: 0;
 	width: 100%;
-	height: 90px;
+	height: 80px;
 	background: url(../images/common/wave.png) repeat-x left;
 	background-size: cover;
+	
+	&.flip {
+		background-image: url(../images/common/wave_flip.png);
+		top: 99%;
+		bottom: auto;
+	}
 	
 	@media (min-width: 1024px) {
 		height: 150px;
@@ -350,6 +356,7 @@
 	height: 46px;
 	border: 0;
 	box-shadow: none;
+	z-index: 11;
 	
 	@media (min-width: 1024px) {
 		width: 80px;
@@ -449,7 +456,6 @@
 		
 		a {
 			margin-right: 0;
-			margin-bottom: 14px;
 		}
 	}
 }

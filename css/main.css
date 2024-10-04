@@ -903,7 +903,7 @@ hr {
   text-transform: uppercase;
   font-family: "Grandstander", cursive;
   font-weight: 700;
-  font-size: 25px;
+  font-size: 26px;
   text-align: center;
   color: #1B449C;
 }
@@ -928,7 +928,7 @@ hr {
 }
 .section-title .wrapper p {
   margin: 0 10px;
-  font-size: 25px;
+  font-size: 26px;
 }
 @media (min-width: 1024px) {
   .section-title .wrapper p {
@@ -1011,9 +1011,14 @@ hr {
   bottom: -2px;
   left: 0;
   width: 100%;
-  height: 90px;
+  height: 80px;
   background: url(../images/common/wave.png) repeat-x left;
   background-size: cover;
+}
+.wave-tail.flip {
+  background-image: url(../images/common/wave_flip.png);
+  top: 99%;
+  bottom: auto;
 }
 @media (min-width: 1024px) {
   .wave-tail {
@@ -1027,6 +1032,7 @@ hr {
   height: 46px;
   border: 0;
   box-shadow: none;
+  z-index: 11;
 }
 @media (min-width: 1024px) {
   .btn-slider {
@@ -1118,7 +1124,6 @@ hr {
 }
 .link-list.vertical a {
   margin-right: 0;
-  margin-bottom: 14px;
 }
 
 .home-page .hero {
@@ -1217,6 +1222,7 @@ hr {
   align-items: center;
   flex-wrap: wrap;
   position: relative;
+  z-index: 1;
 }
 .home-page .about .age-slider .image {
   max-width: 100%;
@@ -1388,7 +1394,7 @@ hr {
 }
 .home-page .stories .item .image {
   border-radius: 24px;
-  padding-top: 133.3333333333%;
+  padding-top: 56.25%;
   background: #BBD2FF no-repeat center;
   background-size: cover;
   border-bottom: 2px solid #1B449C;
@@ -1410,14 +1416,25 @@ hr {
 }
 .home-page .stories .item .content {
   font-weight: 600;
-  padding: 28px 40px 100px;
-  font-size: 20px;
+  padding: 14px 28px 60px;
+  font-size: 14px;
   display: flex;
   flex-direction: column;
 }
+@media (min-width: 1024px) {
+  .home-page .stories .item .content {
+    padding: 28px 40px 100px;
+    font-size: 20px;
+  }
+}
 .home-page .stories .item .content p {
   font-family: "Grandstander", cursive;
-  line-height: 1.6rem;
+  line-height: 1.2rem;
+}
+@media (min-width: 1024px) {
+  .home-page .stories .item .content p {
+    line-height: 1.6rem;
+  }
 }
 .home-page .stories .item .content h4 {
   font-family: "Grandstander", cursive;
@@ -1427,6 +1444,7 @@ hr {
   transform: translate(-50%, 0);
   bottom: 28px;
   left: 50%;
+  width: 100%;
 }
 .home-page .stories .wave-tail {
   background: none;
@@ -1483,6 +1501,8 @@ hr {
 }
 .home-page .blog .tab-pane .content p {
   margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 22px;
 }
 @media (min-width: 1024px) {
   .home-page .blog .tab-pane .content p {

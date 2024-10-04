@@ -58,10 +58,16 @@ const app = {
 					perView: 4
 				},
 				667: {
-					perView: 2
+					perView: 2,
+					gap: 16
 				},
 				480: {
-					perView: 2
+					perView: 1,
+					gap: 16,
+					peek: {
+						before: 50,
+						after: 50
+					},
 				}
 			}
 		});
