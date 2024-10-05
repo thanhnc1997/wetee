@@ -36,8 +36,8 @@ const app = {
 				count ++;
 				intro.querySelector('.bar').style.cssText = `width: ${width * count}%`;
 				if (width * count >= 100) {
-					intro.remove();
 					clearInterval(loadingInterval);
+					setTimeout(() => {intro.remove()}, 250);
 				}
 			}
 			
