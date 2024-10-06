@@ -1496,6 +1496,7 @@ hr {
 .home-page .products .product-detail ul {
   display: flex;
   flex-wrap: wrap;
+  flex-grow: 1;
 }
 .home-page .products .product-detail ul li {
   flex: 0 0 100%;
