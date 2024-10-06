@@ -78,16 +78,27 @@ const app = {
 		// stories slider
 		let glide = new Glide('#stories', {
 			type: 'carousel',
-			perView: 4,
-			focusAt: 'center',
+			perView: 3,
+			peek: {
+				before: 150,
+				after: 150
+			},
 			gap: 20,
 			breakpoints: {
 				1024: {
-					perView: 4
+					perView: 3,
+					peek: {
+						before: 150,
+						after: 150
+					},
 				},
 				667: {
 					perView: 2,
-					gap: 16
+					gap: 16,
+					peek: {
+						before: 50,
+						after: 50
+					},
 				},
 				480: {
 					perView: 1,
@@ -104,12 +115,12 @@ const app = {
 		// product detail
 		let products = homePage.querySelectorAll('.products .product');
 		products.forEach(product => {
-			product.addEventListener('click', () => {
+			product.addEventListener('click', (e) => {
 				
 				if (homePage.querySelector('.products .product .product-detail.active')) {
 					homePage.querySelector('.products .product .product-detail.active').classList.remove('active');
 				}
-				product.querySelector('.product-detail').classList.add('active');
+				e.currentTarget.querySelector('.product-detail').classList.toggle('active');
 			});
 		}); 
 	}
