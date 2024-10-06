@@ -41,7 +41,7 @@ const app = {
 				}
 			}
 			
-			let loadingInterval = setInterval(() => {loading()}, 800);
+			let loadingInterval = setInterval(() => {loading()}, 500);
 		}
 	},
 	home() {

@@ -422,6 +422,8 @@
 				font-size: 14px;
 				display: flex;
 				flex-direction: column;
+				flex-grow: 1;
+				justify-content: flex-end;
 				
 				@media (min-width: 1024px) {
 					padding: 28px 40px 28px;
@@ -431,6 +433,7 @@
 				p {
 					font-family: 'Grandstander', cursive;
 					line-height: 1.2rem;
+					margin-bottom: 50%;
 					
 					@media (min-width: 1024px) {
 						line-height: 1.6rem;
