@@ -1748,6 +1748,7 @@ hr {
 .home-page .blog .tab-pane .content .btn {
   font-size: 24px;
   width: 100%;
+  padding: 10px 24px;
 }
 .home-page .blog .wave-tail {
   background: none;
