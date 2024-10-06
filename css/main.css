@@ -512,7 +512,7 @@ hr {
   justify-content: space-between;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 991px) {
   .no-pc {
     display: none;
   }
