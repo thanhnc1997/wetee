@@ -1377,8 +1377,8 @@ hr {
   }
 }
 .home-page .products {
-  padding: 160px 0 180px;
-  background: #BBD2FF url(../images/common/circle_mobile.png) no-repeat center;
+  padding: 110px 0 80px;
+  background: #BBD2FF url(../images/common/circle_mobile.png) no-repeat bottom center;
   background-size: cover;
 }
 @media (min-width: 1024px) {
@@ -1426,8 +1426,13 @@ hr {
   }
 }
 .home-page .reasons {
-  padding: 20px 0 80px;
+  padding: 0 0 60px;
   background: #BBD2FF;
+}
+@media (min-width: 1024px) {
+  .home-page .reasons {
+    padding: 20px 0 80px;
+  }
 }
 .home-page .reasons .section-title {
   transform: translate(0, 50%);
@@ -1491,7 +1496,12 @@ hr {
   }
 }
 .home-page .stories .section-title {
-  margin-bottom: 66px;
+  margin-bottom: 40px;
+}
+@media (min-width: 1024px) {
+  .home-page .stories .section-title {
+    margin-bottom: 66px;
+  }
 }
 .home-page .stories .glide__slide {
   height: auto;
@@ -1510,15 +1520,10 @@ hr {
 }
 .home-page .stories .item .image {
   border-radius: 24px;
-  padding-top: 56.25%;
+  padding-top: 133.3333333333%;
   background: #BBD2FF no-repeat center;
   background-size: cover;
   border-bottom: 2px solid #1B449C;
-}
-@media (min-width: 1024px) {
-  .home-page .stories .item .image {
-    padding-top: 56.25%;
-  }
 }
 .home-page .stories .item .rating {
   position: absolute;
@@ -1532,14 +1537,14 @@ hr {
 }
 .home-page .stories .item .content {
   font-weight: 600;
-  padding: 14px 28px 60px;
+  padding: 14px 28px 14px;
   font-size: 14px;
   display: flex;
   flex-direction: column;
 }
 @media (min-width: 1024px) {
   .home-page .stories .item .content {
-    padding: 28px 40px 100px;
+    padding: 28px 40px 28px;
     font-size: 20px;
   }
 }
@@ -1556,11 +1561,13 @@ hr {
   font-family: "Grandstander", cursive;
   text-transform: uppercase;
   font-size: 22px;
+  /*
   position: absolute;
   transform: translate(-50%, 0);
   bottom: 28px;
   left: 50%;
   width: 100%;
+  */
 }
 .home-page .stories .wave-tail {
   background: none;
@@ -1583,7 +1590,14 @@ hr {
 .home-page .blog .sub-title {
   font-size: 20px;
   line-height: 1.6rem;
-  margin-bottom: 80px;
+  width: 80%;
+  margin: 0 auto 40px;
+}
+@media (min-width: 1024px) {
+  .home-page .blog .sub-title {
+    width: auto;
+    margin-bottom: 80px;
+  }
 }
 .home-page .blog .tab-pane .grid {
   grid-gap: 20px;
