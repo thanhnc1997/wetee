@@ -157,8 +157,12 @@
 		}
 		
 		.grid {
-			grid-gap: 60px;
+			grid-gap: 30px;
 			position: relative;
+			
+			@media (min-width: 1280px) {
+				grid-gap: 60px;
+			}
 		}
 		
 		.section-title {

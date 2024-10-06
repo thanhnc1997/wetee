@@ -1390,8 +1390,13 @@ hr {
   }
 }
 .home-page .products .grid {
-  grid-gap: 60px;
+  grid-gap: 30px;
   position: relative;
+}
+@media (min-width: 1280px) {
+  .home-page .products .grid {
+    grid-gap: 60px;
+  }
 }
 .home-page .products .section-title {
   margin-bottom: 28px;
