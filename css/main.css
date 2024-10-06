@@ -994,6 +994,7 @@ hr {
 .section-title .wrapper p {
   margin: 0 10px;
   font-size: 25px;
+  transform: translateY(2px);
 }
 @media (min-width: 390px) {
   .section-title .wrapper p {
@@ -1480,6 +1481,7 @@ hr {
 .home-page .products .product-detail .left h3 {
   font-size: 32px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 @media (min-width: 1024px) {
   .home-page .products .product-detail .left h3 {
@@ -1709,6 +1711,12 @@ hr {
   background: #E1EBFF no-repeat center;
   background-size: cover;
   border-radius: 18px;
+  margin-bottom: 14px;
+}
+@media (min-width: 1024px) {
+  .home-page .blog .tab-pane .image {
+    margin-bottom: 0;
+  }
 }
 .home-page .blog .tab-pane .content {
   display: flex;
@@ -1720,6 +1728,7 @@ hr {
   text-transform: uppercase;
   margin-bottom: 18;
   font-family: "Grandstander", cursive;
+  margin-bottom: 14px;
 }
 @media (min-width: 1024px) {
   .home-page .blog .tab-pane .content h4 {
