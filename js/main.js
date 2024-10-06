@@ -116,11 +116,18 @@ const app = {
 		let products = homePage.querySelectorAll('.products .product');
 		products.forEach(product => {
 			product.addEventListener('click', (e) => {
-				
-				if (homePage.querySelector('.products .product .product-detail.active')) {
-					homePage.querySelector('.products .product .product-detail.active').classList.remove('active');
+				let productDetail = product.querySelector('.product-detail');
+				if (productDetail.classList.contains('active')) {
+					productDetail.classList.remove('active');
 				}
-				e.currentTarget.querySelector('.product-detail').classList.toggle('active');
+				else {
+					if (homePage.querySelector('.products .product .product-detail.active')) {
+						homePage.querySelector('.products .product .product-detail.active').classList.remove('active');
+					}
+					productDetail.classList.add('active');
+				}
+					
+				
 			});
 		}); 
 	}

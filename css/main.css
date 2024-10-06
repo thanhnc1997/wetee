@@ -1437,7 +1437,12 @@ hr {
   align-items: flex-start;
 }
 .home-page .products .product-detail.active {
-  display: flex;
+  display: block;
+}
+@media (min-width: 1024px) {
+  .home-page .products .product-detail.active {
+    display: flex;
+  }
 }
 @media (min-width: 1024px) {
   .home-page .products .product-detail {
