@@ -99,8 +99,19 @@ const app = {
 				}
 			}
 		});
-		
 		glide.mount();
+		
+		// product detail
+		let products = homePage.querySelectorAll('.products .product');
+		products.forEach(product => {
+			product.addEventListener('click', () => {
+				
+				if (homePage.querySelector('.products .product .product-detail.active')) {
+					homePage.querySelector('.products .product .product-detail.active').classList.remove('active');
+				}
+				product.querySelector('.product-detail').classList.add('active');
+			});
+		}); 
 	}
 }
 

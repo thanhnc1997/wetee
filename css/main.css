@@ -1391,6 +1391,7 @@ hr {
 }
 .home-page .products .grid {
   grid-gap: 60px;
+  position: relative;
 }
 .home-page .products .section-title {
   margin-bottom: 28px;
@@ -1425,6 +1426,90 @@ hr {
     padding: 18px 28px 12px;
     font-size: 42px;
   }
+}
+.home-page .products .product-detail {
+  padding: 24px;
+  background: #FFFFFF;
+  border-radius: 20px;
+  color: #1B449C;
+  margin-top: 24px;
+  display: none;
+  align-items: flex-start;
+}
+.home-page .products .product-detail.active {
+  display: flex;
+}
+@media (min-width: 1024px) {
+  .home-page .products .product-detail {
+    padding: 40px;
+    box-shadow: 0 4px 10px 1px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: calc(100% + 24px);
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    margin-top: 0;
+  }
+}
+.home-page .products .product-detail .left {
+  flex: 0 0 30%;
+  border-bottom: 1px solid #1B449C;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+}
+@media (min-width: 1024px) {
+  .home-page .products .product-detail .left {
+    padding: 0;
+    border-bottom: 0;
+    margin-bottom: 0;
+    margin-right: 60px;
+    padding-right: 60px;
+    border-right: 1px solid #1B449C;
+  }
+}
+.home-page .products .product-detail .left h3 {
+  font-size: 32px;
+  font-weight: 700;
+}
+@media (min-width: 1024px) {
+  .home-page .products .product-detail .left h3 {
+    font-size: 40px;
+  }
+}
+.home-page .products .product-detail .left p {
+  font-weight: 600;
+  font-size: 20px;
+}
+.home-page .products .product-detail .left .btn {
+  width: 100%;
+}
+.home-page .products .product-detail ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.home-page .products .product-detail ul li {
+  flex: 0 0 100%;
+  max-width: 100%;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+@media (min-width: 1024px) {
+  .home-page .products .product-detail ul li {
+    flex: 0 0 50%;
+    max-width: 50%;
+    font-size: 20px;
+  }
+}
+.home-page .products .product-detail ul li::before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  background: #1B449C;
+  width: 6px;
+  height: 6px;
+  margin-right: 6px;
 }
 .home-page .reasons {
   padding: 0 0 60px;
