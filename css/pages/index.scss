@@ -323,6 +323,10 @@
 			grid-gap: 0;
 			
 			@media (min-width: 1024px) {
+				grid-gap: 30px;
+			}
+			
+			@media (min-width: 1324px) {
 				grid-gap: 50px;
 			}
 		}
