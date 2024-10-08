@@ -729,7 +729,7 @@ hr {
   background-size: contain;
   padding: 0;
 }
-@media (min-width: 1320px) {
+@media (min-width: 1400px) {
   .header .nav-trigger {
     display: none;
   }
@@ -742,7 +742,7 @@ hr {
   padding: 28px 8px;
   position: relative;
 }
-@media (min-width: 1320px) {
+@media (min-width: 1400px) {
   .header .logo {
     margin-right: 8%;
   }
@@ -781,7 +781,7 @@ hr {
   z-index: 11;
   border-top: 1px solid #1B449C;
 }
-@media (min-width: 1320px) {
+@media (min-width: 1400px) {
   .header nav {
     position: static;
     display: flex;
@@ -801,14 +801,14 @@ hr {
   max-width: 500px;
   margin: auto;
 }
-@media (min-width: 1320px) {
+@media (min-width: 1400px) {
   .header nav ul {
     max-width: none;
     display: flex;
     align-items: center;
   }
 }
-@media (min-width: 1800px) {
+@media (min-width: 1400px) {
   .header nav ul {
     margin: 0 auto 0 14%;
   }
@@ -816,7 +816,7 @@ hr {
 .header nav li {
   margin: 0;
 }
-@media (min-width: 1320px) {
+@media (min-width: 1400px) {
   .header nav li {
     margin: 0 4px;
   }
@@ -834,7 +834,7 @@ hr {
   margin-bottom: 24px;
   border: 2px solid #1B449C;
 }
-@media (min-width: 1320px) {
+@media (min-width: 1400px) {
   .header nav a {
     font-size: 16px;
     margin-bottom: 0;
