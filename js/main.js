@@ -76,40 +76,69 @@ const app = {
 		});
 		
 		// stories slider
-		let glide = new Glide('#stories', {
+		let sliderOption = {
 			type: 'carousel',
 			gap: 20,
-			breakpoints: {
-				4000: {
-					perView: 5,
+			perView: 1,
+			peek: {
+				before: 80,
+				after: 80
+			}
+		}
+		
+		if (window.innerWidth >= 1024) {
+			sliderOption.perView = 2,
+			sliderOption.peek = {
+				before: 150,
+				after: 150
+			}
+		}
+		
+		if (window.innerWidth >= 1280) {
+			sliderOption.perView = 3,
+			sliderOption.peek = {
+				before: 150,
+				after: 150
+			}
+		}
+		
+		if (window.innerWidth >= 1800) {
+			sliderOption.perView = 5,
+			sliderOption.peek = {
+				before: 150,
+				after: 150
+			}
+		}
+		
+		let glide = new Glide('#stories', sliderOption);
+		glide.mount();
+		window.addEventListener('resize', () => {
+			if (window.innerWidth >= 1024) {
+				sliderOption.perView = 2,
+				sliderOption.peek = {
 					before: 150,
 					after: 150
-				},
-				1440: {
-					perView: 3,
-					peek: {
-						before: 150,
-						after: 150
-					},
-				},
-				1366: {
-					perView: 3,
-					peek: {
-						before: 100,
-						after: 100
-					},
-				},
-				480: {
-					perView: 1,
-					gap: 16,
-					peek: {
-						before: 50,
-						after: 50
-					},
 				}
 			}
+
+			if (window.innerWidth >= 1280) {
+				sliderOption.perView = 3,
+				sliderOption.peek = {
+					before: 150,
+					after: 150
+				}
+			}
+
+			if (window.innerWidth >= 1800) {
+				sliderOption.perView = 5,
+				sliderOption.peek = {
+					before: 150,
+					after: 150
+				}
+			}
+			
+			glide.update(sliderOption);
 		});
-		glide.mount();
 		
 		// product detail
 		let products = homePage.querySelectorAll('.products .product');
