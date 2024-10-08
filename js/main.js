@@ -82,10 +82,8 @@ const app = {
 			breakpoints: {
 				4000: {
 					perView: 5,
-					peek: {
-						before: 150,
-						after: 150
-					},
+					before: 150,
+					after: 150
 				},
 				1440: {
 					perView: 3,
@@ -94,12 +92,11 @@ const app = {
 						after: 150
 					},
 				},
-				667: {
-					perView: 2,
-					gap: 16,
+				1366: {
+					perView: 3,
 					peek: {
-						before: 50,
-						after: 50
+						before: 100,
+						after: 100
 					},
 				},
 				480: {
@@ -128,8 +125,6 @@ const app = {
 					}
 					productDetail.classList.add('active');
 				}
-					
-				
 			});
 		}); 
 	}

@@ -562,7 +562,7 @@ hr {
     background: url(../images/icons/hamburger.svg) no-repeat center;
     background-size: contain;
     padding: 0; }
-    @media (min-width: 1280px) {
+    @media (min-width: 1320px) {
       .header .nav-trigger {
         display: none; } }
     .header .nav-trigger.trigger {
@@ -637,7 +637,7 @@ hr {
       text-align: center;
       padding: 6px;
       color: #1B449C;
-      font-weight: 600;
+      font-weight: 700;
       position: relative;
       border-radius: 10px;
       transition: .15s;
@@ -650,6 +650,9 @@ hr {
           margin-bottom: 0;
           border: 0;
           padding: 6px 42px 6px 24px; } }
+      @media (min-width: 1800px) {
+        .header nav a {
+          font-size: 18px; } }
       .header nav a::after {
         content: '';
         display: none;
@@ -1255,7 +1258,7 @@ hr {
   background: #BBD2FF;
   overflow: hidden;
   position: relative; }
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     .home-page .stories {
       padding: 0px 0 160px; } }
   @media (min-width: 1800px) {

@@ -17,7 +17,7 @@
 		background-size: contain;
 		padding: 0;
 		
-		@media (min-width: 1280px) {
+		@media (min-width: 1320px) {
 			display: none;
 		} 
 			
@@ -119,7 +119,7 @@
 			text-align: center;
 			padding: 6px ;
 			color: #1B449C;
-			font-weight: 600;
+			font-weight: 700;
 			position: relative;
 			border-radius: 10px;
 			transition: .15s;
@@ -132,6 +132,10 @@
 				margin-bottom: 0;
 				border: 0;
 				padding: 6px 42px 6px 24px;
+			}
+			
+			@media (min-width: 1800px) {
+				font-size: 18px;
 			}
 			
 			&::after {
