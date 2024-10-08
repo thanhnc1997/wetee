@@ -512,13 +512,13 @@ hr {
   justify-content: space-between;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .no-pc {
     display: none;
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1280px) {
   .no-sp {
     display: none;
   }
@@ -1128,9 +1128,9 @@ hr {
   top: 99%;
   bottom: auto;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .wave-tail {
-    height: 150px;
+    height: 160px;
     background-size: contain;
   }
 }
@@ -1302,6 +1302,11 @@ hr {
   margin: auto;
   order: 1;
 }
+@media (min-width: 1024px) {
+  .home-page .hero .hero-image {
+    width: 80%;
+  }
+}
 @media (min-width: 1280px) {
   .home-page .hero .hero-image {
     width: 60%;
@@ -1323,6 +1328,11 @@ hr {
 .home-page .hero .hero-title-image {
   position: relative;
   order: 0;
+}
+@media (min-width: 1024px) {
+  .home-page .hero .hero-title-image {
+    width: 60%;
+  }
 }
 @media (min-width: 1280px) {
   .home-page .hero .hero-title-image {
@@ -1355,6 +1365,18 @@ hr {
 }
 .home-page .hero .hero-title-image::after {
   bottom: 0;
+}
+@media (min-width: 1024px) {
+  .home-page .hero .wave-tail {
+    height: 210px;
+    background-size: cover;
+  }
+}
+@media (min-width: 1320px) {
+  .home-page .hero .wave-tail {
+    height: 190px;
+    background-size: contain;
+  }
 }
 .home-page .about {
   position: relative;

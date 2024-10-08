@@ -24,6 +24,10 @@
 			margin: auto;
 			order: 1;
 			
+			@media (min-width: 1024px) {
+				width: 80%;
+			}
+			
 			@media (min-width: 1280px) {
 				width: 60%;
 				order: 0;
@@ -45,6 +49,10 @@
 		.hero-title-image {
 			position: relative;
 			order: 0;
+			
+			@media (min-width: 1024px) {
+				width: 60%;
+			}
 			
 			@media (min-width: 1280px) {
 				order: 1;
@@ -79,6 +87,18 @@
 			
 			&::after {
 				bottom: 0;
+			}
+		}
+		
+		.wave-tail {
+			@media (min-width: 1024px) {
+				height: 210px;
+				background-size: cover;
+			}
+			
+			@media (min-width: 1320px) {
+				height: 190px;
+				background-size: contain;
 			}
 		}
 	}
