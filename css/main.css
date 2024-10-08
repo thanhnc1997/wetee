@@ -689,7 +689,7 @@ hr {
 .footer {
   background: #1B449C;
   color: #FFFFFF;
-  padding: 40px 0;
+  padding: 40px 0 0;
   position: relative; }
   .footer .mascot {
     position: absolute;
