@@ -808,7 +808,7 @@ hr {
     align-items: center;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1800px) {
   .header nav ul {
     margin: 0 auto 0 14%;
   }
