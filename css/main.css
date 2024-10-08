@@ -1796,7 +1796,7 @@ hr {
   padding: 20px 0 180px;
   position: relative;
 }
-@media (min-width: 1024px) {
+@media (min-width: 768px) {
   .home-page .blog {
     padding: 60px 0 300px;
   }
