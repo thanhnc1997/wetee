@@ -1290,12 +1290,14 @@ hr {
       width: 60%;
       height: 30px;
       background: url(../images/stars/rating.svg) no-repeat center;
-      background-size: contain; }
+      background-size: contain;
+      /*
       @media (min-width: 1800px) {
-        .home-page .stories .item .rating {
-          top: 40px;
-          height: 60px;
-          background-size: cover; } }
+      	top: 40px;
+      	height: 60px;
+      	background-size: cover;
+      }
+      */ }
     .home-page .stories .item .content {
       font-weight: 600;
       padding: 14px 40px 14px;
@@ -1303,32 +1305,38 @@ hr {
       display: flex;
       flex-direction: column;
       flex-grow: 1;
-      justify-content: flex-end; }
+      justify-content: flex-end;
+      /*
+      @media (min-width: 1800px) {
+      	padding: 40px 80px 28px;
+      	font-size: 28px;
+      }
+      */ }
       @media (min-width: 1024px) {
         .home-page .stories .item .content {
           padding: 28px 40px 28px;
           font-size: 20px; } }
-      @media (min-width: 1800px) {
-        .home-page .stories .item .content {
-          padding: 40px 80px 28px;
-          font-size: 28px; } }
       .home-page .stories .item .content p {
         font-family: 'Grandstander', cursive;
         line-height: 1.2rem;
-        margin-bottom: 50%; }
+        margin-bottom: 50%;
+        /*
+        @media (min-width: 1800px) {
+        	line-height: 2rem;
+        }
+        */ }
         @media (min-width: 1024px) {
           .home-page .stories .item .content p {
             line-height: 1.6rem; } }
-        @media (min-width: 1800px) {
-          .home-page .stories .item .content p {
-            line-height: 2rem; } }
       .home-page .stories .item .content h4 {
         font-family: 'Grandstander', cursive;
         text-transform: uppercase;
-        font-size: 22px; }
+        font-size: 22px;
+        /*
         @media (min-width: 1800px) {
-          .home-page .stories .item .content h4 {
-            font-size: 28px; } }
+        	font-size: 28px;
+        }
+        */ }
   .home-page .stories .wave-tail {
     background: none;
     height: auto;

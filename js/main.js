@@ -78,14 +78,16 @@ const app = {
 		// stories slider
 		let glide = new Glide('#stories', {
 			type: 'carousel',
-			perView: 3,
-			peek: {
-				before: 150,
-				after: 150
-			},
 			gap: 20,
 			breakpoints: {
-				1024: {
+				4000: {
+					perView: 5,
+					peek: {
+						before: 150,
+						after: 150
+					},
+				},
+				1440: {
 					perView: 3,
 					peek: {
 						before: 150,
