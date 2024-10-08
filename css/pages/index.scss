@@ -152,7 +152,7 @@
 		
 		@media (min-width: 1024px) {
 			padding: 250px 0 80px;
-			background: #BBD2FF url(../images/common/circle.png) no-repeat top center;
+			background: #BBD2FF url(../images/common/circle.png) no-repeat bottom center;
 			background-size: cover;
 		}
 		
@@ -409,7 +409,7 @@
 			.image {
 				border-radius: 24px;
 				padding-top: calc(4 / 3 * 100%);
-				background: #BBD2FF no-repeat center;
+				background: #BBD2FF no-repeat top center;
 				background-size: cover;
 				border-bottom: 2px solid #1B449C;
 			}
@@ -423,6 +423,12 @@
 				height: 30px;
 				background: url(../images/stars/rating.svg) no-repeat center;
 				background-size: contain;
+				
+				@media (min-width: 1800px) {
+					top: 40px;
+					height: 60px;
+					background-size: cover;
+				}
 			}
 			
 			.content {
@@ -439,6 +445,11 @@
 					font-size: 20px;
 				}
 				
+				@media (min-width: 1800px) {
+					padding: 40px 80px 28px;
+					font-size: 28px;
+				}
+				
 				p {
 					font-family: 'Grandstander', cursive;
 					line-height: 1.2rem;
@@ -447,19 +458,20 @@
 					@media (min-width: 1024px) {
 						line-height: 1.6rem;
 					}
+					
+					@media (min-width: 1800px) {
+						line-height: 2rem;
+					}
 				}
 				
 				h4 {
 					font-family: 'Grandstander', cursive;
 					text-transform: uppercase;
 					font-size: 22px;
-					/*
-					position: absolute;
-					transform: translate(-50%, 0);
-					bottom: 28px;
-					left: 50%;
-					width: 100%;
-					*/
+					
+					@media (min-width: 1800px) {
+						font-size: 28px;
+					}
 				}
 			}
 		}

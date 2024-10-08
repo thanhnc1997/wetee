@@ -624,6 +624,9 @@ hr {
           max-width: none;
           display: flex;
           align-items: center; } }
+      @media (min-width: 1800px) {
+        .header nav ul {
+          margin: 0 auto 0 14%; } }
     .header nav li {
       margin: 0; }
       @media (min-width: 1320px) {
@@ -672,6 +675,8 @@ hr {
     display: flex;
     align-items: center;
     justify-content: center; }
+    .header .tool-bar .btn-outline {
+      border-radius: 100px; }
     .header .tool-bar .btn-icon {
       position: relative;
       margin-left: 8px; }
@@ -1088,7 +1093,7 @@ hr {
   @media (min-width: 1024px) {
     .home-page .products {
       padding: 250px 0 80px;
-      background: #BBD2FF url(../images/common/circle.png) no-repeat top center;
+      background: #BBD2FF url(../images/common/circle.png) no-repeat bottom center;
       background-size: cover; } }
   .home-page .products .grid {
     grid-gap: 30px;
@@ -1274,7 +1279,7 @@ hr {
     .home-page .stories .item .image {
       border-radius: 24px;
       padding-top: calc(4 / 3 * 100%);
-      background: #BBD2FF no-repeat center;
+      background: #BBD2FF no-repeat top center;
       background-size: cover;
       border-bottom: 2px solid #1B449C; }
     .home-page .stories .item .rating {
@@ -1286,6 +1291,11 @@ hr {
       height: 30px;
       background: url(../images/stars/rating.svg) no-repeat center;
       background-size: contain; }
+      @media (min-width: 1800px) {
+        .home-page .stories .item .rating {
+          top: 40px;
+          height: 60px;
+          background-size: cover; } }
     .home-page .stories .item .content {
       font-weight: 600;
       padding: 14px 40px 14px;
@@ -1298,6 +1308,10 @@ hr {
         .home-page .stories .item .content {
           padding: 28px 40px 28px;
           font-size: 20px; } }
+      @media (min-width: 1800px) {
+        .home-page .stories .item .content {
+          padding: 40px 80px 28px;
+          font-size: 28px; } }
       .home-page .stories .item .content p {
         font-family: 'Grandstander', cursive;
         line-height: 1.2rem;
@@ -1305,17 +1319,16 @@ hr {
         @media (min-width: 1024px) {
           .home-page .stories .item .content p {
             line-height: 1.6rem; } }
+        @media (min-width: 1800px) {
+          .home-page .stories .item .content p {
+            line-height: 2rem; } }
       .home-page .stories .item .content h4 {
         font-family: 'Grandstander', cursive;
         text-transform: uppercase;
-        font-size: 22px;
-        /*
-        position: absolute;
-        transform: translate(-50%, 0);
-        bottom: 28px;
-        left: 50%;
-        width: 100%;
-        */ }
+        font-size: 22px; }
+        @media (min-width: 1800px) {
+          .home-page .stories .item .content h4 {
+            font-size: 28px; } }
   .home-page .stories .wave-tail {
     background: none;
     height: auto;
