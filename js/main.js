@@ -86,7 +86,7 @@ const app = {
 			}
 		}
 		
-		if (window.innerWidth >= 1024) {
+		if (window.innerWidth >= 768) {
 			sliderOption.perView = 2,
 			sliderOption.peek = {
 				before: 150,
@@ -113,7 +113,7 @@ const app = {
 		let glide = new Glide('#stories', sliderOption);
 		glide.mount();
 		window.addEventListener('resize', () => {
-			if (window.innerWidth >= 1024) {
+			if (window.innerWidth >= 768) {
 				sliderOption.perView = 2,
 				sliderOption.peek = {
 					before: 150,
@@ -137,7 +137,9 @@ const app = {
 				}
 			}
 			
-			glide.update(sliderOption);
+			setTimeout(() => {
+				glide.update(sliderOption);
+			}, 250);
 		});
 		
 		// product detail
