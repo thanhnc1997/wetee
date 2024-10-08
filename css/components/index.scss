@@ -92,7 +92,11 @@
 		}
 		
 		ul {
+			max-width: 500px;
+			margin: auto;
+			
 			@media (min-width: 1320px) {
+				max-width: none;
 				display: flex;
 				align-items: center;
 			}

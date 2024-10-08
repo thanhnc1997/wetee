@@ -311,13 +311,13 @@ hr {
 }
 
 .no-pc {
-	@media (min-width: 991px) {
+	@media (min-width: 1024px) {
 		display: none;
 	}
 }
 
 .no-sp {
-	@media (max-width: 1024px) {
+	@media (max-width: 991px) {
 		display: none;
 	}
 }
