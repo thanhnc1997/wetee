@@ -748,7 +748,7 @@ hr {
   }
 }
 .header .logo img {
-  max-width: 150px;
+  width: 150px;
   transform: translate(0, 20%);
 }
 .header .logo::before, .header .logo::after {
@@ -1119,18 +1119,18 @@ hr {
   bottom: -2px;
   left: 0;
   width: 100%;
-  height: 80px;
+  height: 70px;
   background: url(../images/common/wave.png) repeat-x left;
-  background-size: cover;
+  background-size: contain;
 }
 .wave-tail.flip {
   background-image: url(../images/common/wave_flip.png);
   top: 99%;
   bottom: auto;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .wave-tail {
-    height: 160px;
+    height: 150px;
     background-size: contain;
   }
 }
@@ -1365,6 +1365,12 @@ hr {
 }
 .home-page .hero .hero-title-image::after {
   bottom: 0;
+}
+@media (min-width: 768px) {
+  .home-page .hero .wave-tail {
+    height: 170px;
+    background-size: cover;
+  }
 }
 @media (min-width: 1024px) {
   .home-page .hero .wave-tail {
