@@ -703,9 +703,10 @@ hr {
   .footer .container {
     padding-bottom: 60px; }
   .footer .grid {
-    grid-gap: 60px; }
+    grid-gap: 40px; }
     @media (min-width: 1024px) {
       .footer .grid {
+        grid-gap: 60px;
         grid-template: auto / 30% 1fr 28%; } }
   .footer .logo {
     max-width: 196px;
@@ -730,11 +731,23 @@ hr {
   @media (min-width: 1024px) {
     .footer .fc-2 {
       padding-left: 25%; } }
+  .footer .fc-2 h4 {
+    font-size: 22px; }
+    @media (min-width: 1024px) {
+      .footer .fc-2 h4 {
+        font-size: normal; } }
   .footer .footer-col {
     text-align: center; }
     @media (min-width: 1024px) {
       .footer .footer-col {
         text-align: left; } }
+    .footer .footer-col p {
+      line-height: 1.4rem; }
+    .footer .footer-col .footer-title {
+      margin-bottom: 14px; }
+      @media (min-width: 1024px) {
+        .footer .footer-col .footer-title {
+          margin-bottom: 28px; } }
   .footer .link-list {
     justify-content: center; }
     @media (min-width: 1024px) {
@@ -1190,7 +1203,7 @@ hr {
   .home-page .reasons .list {
     border: 5px solid #FFFFFF;
     border-radius: 28px;
-    padding: 80px 20px 40px; }
+    padding: 40px 20px 40px; }
     @media (min-width: 1024px) {
       .home-page .reasons .list {
         border-radius: 80px;
@@ -1207,24 +1220,31 @@ hr {
     font-size: 18px;
     color: #1B449C;
     text-align: center;
-    padding: 14px 14px 34px;
+    padding: 14px;
     transition: .15s;
     border-radius: 400px; }
     @media (min-width: 1024px) {
       .home-page .reasons .item {
-        font-size: 24px; } }
+        font-size: 24px;
+        padding: 14px 14px 34px; } }
     .home-page .reasons .item:hover {
       background: #FFCB05; }
     .home-page .reasons .item .image {
       padding-top: 100%;
-      margin-bottom: 28px;
+      margin-bottom: 14px;
       border-radius: 50%;
       overflow: hidden;
       background: no-repeat center;
       background-size: cover; }
+      @media (min-width: 1024px) {
+        .home-page .reasons .item .image {
+          margin-bottom: 28px; } }
     .home-page .reasons .item p {
       font-weight: 600;
-      line-height: 1.6rem; }
+      line-height: 1.2rem; }
+      @media (min-width: 1024px) {
+        .home-page .reasons .item p {
+          line-height: 1.6rem; } }
 .home-page .stories {
   padding: 0px 0 60px;
   background: #BBD2FF;
@@ -1268,7 +1288,7 @@ hr {
       background-size: contain; }
     .home-page .stories .item .content {
       font-weight: 600;
-      padding: 14px 28px 14px;
+      padding: 14px 40px 14px;
       font-size: 14px;
       display: flex;
       flex-direction: column;
