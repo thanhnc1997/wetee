@@ -455,19 +455,19 @@
 	bottom: -2px;
 	left: 0;
 	width: 100%;
-	height: 68px;
+	height: 80px;
 	background: url(../images/common/wave.png) repeat-x left;
-	background-size: contain;
+	background-size: cover;
 	
 	&.flip {
 		background-image: url(../images/common/wave_flip.png);
-		top: 99%;
+		top: 95%;
 		bottom: auto;
 	}
 	
 	@media (min-width: 1024px) {
 		height: 150px;
-		background-size: contain;
+		background-size: cover;
 	}
 }
 

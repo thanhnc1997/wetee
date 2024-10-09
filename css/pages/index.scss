@@ -100,7 +100,7 @@
 		
 		.wave-tail {
 			@media (min-width: 768px) {
-				height: 170px;
+				height: 120px;
 				background-size: cover;
 			}
 			
@@ -110,8 +110,13 @@
 			}
 			
 			@media (min-width: 1320px) {
-				height: 190px;
-				background-size: contain;
+				height: 160px;
+				background-size: cover;
+			}
+			
+			@media (min-width: 1800px) {
+				height: 210px;
+				background-size: cover;
 			}
 		}
 	}
