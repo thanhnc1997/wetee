@@ -46,7 +46,7 @@ const app = {
 	},
 	home() {
 		const homePage = template.querySelector('.home-page');
-		let count = 0;
+		let count = 1;
 
 		// age slider
 		let ageSlider = homePage.querySelector('.about .age-slider');
@@ -58,9 +58,9 @@ const app = {
 
 		function changeAge(i) {
 			ageProgressBar.style.cssText = `width: ${width * count}%`;
-			if (i <= 0) ageProgressBar.style.cssText = `width: 18%`;
+			if (i <= 1) ageProgressBar.style.cssText = `width: 33.33%`;
 			if (i >= 3) ageProgressBar.style.cssText = `width: 100%`;
-			ageSlider.querySelector('figure').style.cssText = `background-image: url(images/common/${i}_year.png)`;
+			ageSlider.querySelector('figure').style.cssText = `background-image: url(images/common/${i}_year.gif)`;
 		}
 		
 		next.addEventListener('click', () => {
@@ -70,7 +70,7 @@ const app = {
 		});
 		
 		prev.addEventListener('click', () => {
-			if (count <= 0) return false;
+			if (count <= 1) return false;
 			count --;
 			changeAge(count);
 		});
