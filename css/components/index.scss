@@ -95,6 +95,10 @@
 			max-width: 500px;
 			margin: auto;
 			
+			@media (min-width: 1024px) {
+				max-width: 960px;
+			}
+			
 			@media (min-width: 1400px) {
 				max-width: none;
 				display: flex;
@@ -127,11 +131,22 @@
 			margin-bottom: 24px;
 			border: 2px solid #1B449C;
 			
-			@media (min-width: 1400px) {
+			@media (min-width: 768px) {
+				font-size: 32px;
+				padding: 28px;
+				border-radius: 40px;
+			}
+			
+			@media (min-width: 768px) {
+				font-size: 46px;
+			}
+			
+			@media (min-width: 1280px) {
 				font-size: 16px;
 				margin-bottom: 0;
 				border: 0;
 				padding: 6px 42px 6px 24px;
+				border-radius: 10px;
 			}
 			
 			@media (min-width: 1800px) {
