@@ -1083,8 +1083,8 @@ hr {
       background-size: cover; } }
   @media (min-width: 1800px) {
     .home-page .hero .wave-tail {
-      height: 210px;
-      background-size: cover; } }
+      height: 197px;
+      background-size: contain; } }
 .home-page .about {
   position: relative; }
   .home-page .about .section-title {
