@@ -46,6 +46,7 @@ const app = {
 	},
 	home() {
 		const homePage = template.querySelector('.home-page');
+		if (!homePage) return false;
 		let count = 1;
 
 		// age slider
@@ -86,35 +87,9 @@ const app = {
 			}
 		}
 		
-		if (window.innerWidth >= 768) {
-			sliderOption.perView = 2,
-			sliderOption.peek = {
-				before: 150,
-				after: 150
-			}
-		}
-		
-		if (window.innerWidth >= 1280) {
-			sliderOption.perView = 3,
-			sliderOption.peek = {
-				before: 150,
-				after: 150
-			}
-		}
-		
-		if (window.innerWidth >= 1800) {
-			sliderOption.perView = 5,
-			sliderOption.peek = {
-				before: 150,
-				after: 150
-			}
-		}
-		
-		let glide = new Glide('#stories', sliderOption);
-		glide.mount();
-		window.addEventListener('resize', () => {
+		function updateWhenResize() {
 			if (window.innerWidth >= 768) {
-				sliderOption.perView = 2,
+				sliderOption.perView = 2;
 				sliderOption.peek = {
 					before: 150,
 					after: 150
@@ -122,7 +97,7 @@ const app = {
 			}
 
 			if (window.innerWidth >= 1280) {
-				sliderOption.perView = 3,
+				sliderOption.perView = 3;
 				sliderOption.peek = {
 					before: 150,
 					after: 150
@@ -130,13 +105,19 @@ const app = {
 			}
 
 			if (window.innerWidth >= 1800) {
-				sliderOption.perView = 5,
+				sliderOption.perView = 5;
 				sliderOption.peek = {
 					before: 150,
 					after: 150
 				}
 			}
-			
+		}
+		updateWhenResize();
+		
+		let glide = new Glide('#stories', sliderOption);
+		glide.mount();
+		window.addEventListener('resize', () => {
+			updateWhenResize();
 			setTimeout(() => {
 				glide.update(sliderOption);
 			}, 250);
@@ -158,10 +139,52 @@ const app = {
 				}
 			});
 		}); 
-	}
+	},
+	allCategories() {
+		const homePage = template.querySelector('.all-categories-page');
+		if (!homePage) return false;
+		
+		let sliderOption = {
+			type: 'carousel',
+			gap: 20,
+			perView: 1,
+			peek: {
+				before: 80,
+				after: 80
+			}
+		}
+		
+		function updateWhenResize() {
+			if (window.innerWidth >= 768) {
+				sliderOption.perView = 3;
+				sliderOption.peek = {
+					before: 0,
+					after: 0
+				}
+			}
+		}
+		updateWhenResize();
+		let glide_1 = new Glide('#cate_1', sliderOption);
+		let glide_2 = new Glide('#cate_2', sliderOption);
+		let glide_3 = new Glide('#cate_3', sliderOption);
+		glide_1.mount();
+		glide_2.mount();
+		glide_3.mount();
+		
+		window.addEventListener('resize', () => {
+			updateWhenResize();
+			setTimeout(() => {
+				glide_1.update(sliderOption);
+				glide_2.update(sliderOption);
+				glide_3.update(sliderOption);
+			}, 250);
+		});
+	},
 }
 
-app.home();
 app.common.navTab();
 app.common.menu();
 app.common.intro();
+
+app.home();
+app.allCategories();

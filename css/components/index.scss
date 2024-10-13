@@ -389,6 +389,13 @@
 			}
 		}
 		
+		&.green {
+			&::before,
+			&::after {
+				background-image: url(../images/stars/star_green.svg);
+			}
+		}
+		
 		&.pink {
 			&::before,
 			&::after {
