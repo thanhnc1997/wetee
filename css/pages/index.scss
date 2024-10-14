@@ -534,15 +534,15 @@
 	
 	.blog {
 		background: $light;
-		padding: 20px 0 180px;
+		padding: 20px 0 140px;
 		position: relative;
 		
 		@media (min-width: 768px) {
-			padding: 60px 0 300px;
+			padding: 60px 0 260px;
 		}
 		
 		@media (min-width: 1800px) {
-			padding: 20px 0 300px;
+			padding: 20px 0 260px;
 		}
 		
 		.sub-title {
@@ -685,6 +685,11 @@
 
 		&.yellow {
 			background-color: #FFCB05;
+			padding: 110px 0 140px;
+			
+			@media (min-width: 1024px) {
+				padding: 250px 0;
+			}
 		}
 		
 		.section-title {

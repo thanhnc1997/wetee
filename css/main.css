@@ -921,6 +921,15 @@ hr {
   padding: 40px 0 0;
   position: relative;
 }
+.footer .wave-tail {
+  bottom: calc(100% - 10px);
+  left: 0;
+  background: none;
+  height: auto;
+}
+.footer .wave-tail img {
+  width: 100%;
+}
 .footer .mascot {
   position: absolute;
   top: 0;
@@ -1820,17 +1829,17 @@ hr {
 }
 .home-page .blog {
   background: #FFFFFF;
-  padding: 20px 0 180px;
+  padding: 20px 0 140px;
   position: relative;
 }
 @media (min-width: 768px) {
   .home-page .blog {
-    padding: 60px 0 300px;
+    padding: 60px 0 260px;
   }
 }
 @media (min-width: 1800px) {
   .home-page .blog {
-    padding: 20px 0 300px;
+    padding: 20px 0 260px;
   }
 }
 .home-page .blog .sub-title {
@@ -1961,6 +1970,12 @@ hr {
 }
 .all-categories-page .products.yellow {
   background-color: #FFCB05;
+  padding: 110px 0 140px;
+}
+@media (min-width: 1024px) {
+  .all-categories-page .products.yellow {
+    padding: 250px 0;
+  }
 }
 .all-categories-page .products .section-title {
   margin-bottom: 40px;

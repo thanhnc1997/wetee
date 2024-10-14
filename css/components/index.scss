@@ -222,6 +222,17 @@
 	padding: 40px 0 0;
 	position: relative;
 	
+	.wave-tail {
+		bottom: calc(100% - 10px);
+		left: 0;
+		background: none;
+    height: auto;
+		
+		img {
+			width: 100%;
+		}
+	}
+	
 	.mascot {
 		position: absolute;
 		top: 0;
