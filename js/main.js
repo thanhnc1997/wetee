@@ -42,149 +42,159 @@ const app = {
 			}
 			
 			let loadingInterval = setInterval(() => {loading()}, 500);
+		},
+		load() {
+			this.intro();
+			this.menu();
+			this.navTab();
 		}
 	},
-	home() {
-		const homePage = template.querySelector('.home-page');
-		if (!homePage) return false;
-		let count = 1;
+	pages: {
+		home() {
+			const homePage = template.querySelector('.home-page');
+			if (!homePage) return false;
+			let count = 1;
 
-		// age slider
-		let ageSlider = homePage.querySelector('.about .age-slider');
-		let ageProgress = homePage.querySelector('.about .progress');
-		let ageProgressBar = ageProgress.querySelector('.progress-bar');
-		let prev = homePage.querySelector('.about .prev');
-		let next = homePage.querySelector('.about .next');
-		let width = 33.33;
+			// age slider
+			let ageSlider = homePage.querySelector('.about .age-slider');
+			let ageProgress = homePage.querySelector('.about .progress');
+			let ageProgressBar = ageProgress.querySelector('.progress-bar');
+			let prev = homePage.querySelector('.about .prev');
+			let next = homePage.querySelector('.about .next');
+			let width = 33.33;
 
-		function changeAge(i) {
-			ageProgressBar.style.cssText = `width: ${width * count}%`;
-			if (i <= 1) ageProgressBar.style.cssText = `width: 33.33%`;
-			if (i >= 3) ageProgressBar.style.cssText = `width: 100%`;
-			ageSlider.querySelector('figure').style.cssText = `background-image: url(images/common/${i}_year.gif)`;
-		}
-		
-		next.addEventListener('click', () => {
-			if (count >= 3) return false;
-			count ++;
-			changeAge(count);
-		});
-		
-		prev.addEventListener('click', () => {
-			if (count <= 1) return false;
-			count --;
-			changeAge(count);
-		});
-		
-		// stories slider
-		let sliderOption = {
-			type: 'carousel',
-			gap: 20,
-			perView: 1,
-			peek: {
-				before: 80,
-				after: 80
-			}
-		}
-		
-		function updateWhenResize() {
-			if (window.innerWidth >= 768) {
-				sliderOption.perView = 2;
-				sliderOption.peek = {
-					before: 150,
-					after: 150
-				}
+			function changeAge(i) {
+				ageProgressBar.style.cssText = `width: ${width * count}%`;
+				if (i <= 1) ageProgressBar.style.cssText = `width: 33.33%`;
+				if (i >= 3) ageProgressBar.style.cssText = `width: 100%`;
+				ageSlider.querySelector('figure').style.cssText = `background-image: url(images/common/${i}_year.gif)`;
 			}
 
-			if (window.innerWidth >= 1280) {
-				sliderOption.perView = 3;
-				sliderOption.peek = {
-					before: 150,
-					after: 150
-				}
-			}
-
-			if (window.innerWidth >= 1800) {
-				sliderOption.perView = 5;
-				sliderOption.peek = {
-					before: 150,
-					after: 150
-				}
-			}
-		}
-		updateWhenResize();
-		
-		let glide = new Glide('#stories', sliderOption);
-		glide.mount();
-		window.addEventListener('resize', () => {
-			updateWhenResize();
-			setTimeout(() => {
-				glide.update(sliderOption);
-			}, 250);
-		});
-		
-		// product detail
-		let products = homePage.querySelectorAll('.products .product');
-		products.forEach(product => {
-			product.addEventListener('click', (e) => {
-				let productDetail = product.querySelector('.product-detail');
-				if (productDetail.classList.contains('active')) {
-					productDetail.classList.remove('active');
-				}
-				else {
-					if (homePage.querySelector('.products .product .product-detail.active')) {
-						homePage.querySelector('.products .product .product-detail.active').classList.remove('active');
-					}
-					productDetail.classList.add('active');
-				}
+			next.addEventListener('click', () => {
+				if (count >= 3) return false;
+				count ++;
+				changeAge(count);
 			});
-		}); 
-	},
-	allCategories() {
-		const homePage = template.querySelector('.all-categories-page');
-		if (!homePage) return false;
-		
-		let sliderOption = {
-			type: 'carousel',
-			gap: 20,
-			perView: 1,
-			peek: {
-				before: 80,
-				after: 80
-			}
-		}
-		
-		function updateWhenResize() {
-			if (window.innerWidth >= 768) {
-				sliderOption.perView = 3;
-				sliderOption.peek = {
-					before: 0,
-					after: 0
+
+			prev.addEventListener('click', () => {
+				if (count <= 1) return false;
+				count --;
+				changeAge(count);
+			});
+
+			// stories slider
+			let sliderOption = {
+				type: 'carousel',
+				gap: 20,
+				perView: 1,
+				peek: {
+					before: 80,
+					after: 80
 				}
 			}
-		}
-		updateWhenResize();
-		let glide_1 = new Glide('#cate_1', sliderOption);
-		let glide_2 = new Glide('#cate_2', sliderOption);
-		let glide_3 = new Glide('#cate_3', sliderOption);
-		glide_1.mount();
-		glide_2.mount();
-		glide_3.mount();
-		
-		window.addEventListener('resize', () => {
+
+			function updateWhenResize() {
+				if (window.innerWidth >= 768) {
+					sliderOption.perView = 2;
+					sliderOption.peek = {
+						before: 150,
+						after: 150
+					}
+				}
+
+				if (window.innerWidth >= 1280) {
+					sliderOption.perView = 3;
+					sliderOption.peek = {
+						before: 150,
+						after: 150
+					}
+				}
+
+				if (window.innerWidth >= 1800) {
+					sliderOption.perView = 5;
+					sliderOption.peek = {
+						before: 150,
+						after: 150
+					}
+				}
+			}
 			updateWhenResize();
-			setTimeout(() => {
-				glide_1.update(sliderOption);
-				glide_2.update(sliderOption);
-				glide_3.update(sliderOption);
-			}, 250);
-		});
+
+			let glide = new Glide('#stories', sliderOption);
+			glide.mount();
+			window.addEventListener('resize', () => {
+				updateWhenResize();
+				setTimeout(() => {
+					glide.update(sliderOption);
+				}, 250);
+			});
+
+			// product detail
+			let products = homePage.querySelectorAll('.products .product');
+			products.forEach(product => {
+				product.addEventListener('click', (e) => {
+					let productDetail = product.querySelector('.product-detail');
+					if (productDetail.classList.contains('active')) {
+						productDetail.classList.remove('active');
+					}
+					else {
+						if (homePage.querySelector('.products .product .product-detail.active')) {
+							homePage.querySelector('.products .product .product-detail.active').classList.remove('active');
+						}
+						productDetail.classList.add('active');
+					}
+				});
+			}); 
+		},
+		allCategories() {
+			const homePage = template.querySelector('.all-categories-page');
+			if (!homePage) return false;
+
+			let sliderOption = {
+				type: 'carousel',
+				gap: 20,
+				perView: 1,
+				peek: {
+					before: 80,
+					after: 80
+				}
+			}
+
+			function updateWhenResize() {
+				if (window.innerWidth >= 768) {
+					sliderOption.perView = 3;
+					sliderOption.peek = {
+						before: 0,
+						after: 0
+					}
+				}
+			}
+			updateWhenResize();
+			let glide_1 = new Glide('#cate_1', sliderOption);
+			let glide_2 = new Glide('#cate_2', sliderOption);
+			let glide_3 = new Glide('#cate_3', sliderOption);
+			glide_1.mount();
+			glide_2.mount();
+			glide_3.mount();
+
+			window.addEventListener('resize', () => {
+				updateWhenResize();
+				setTimeout(() => {
+					glide_1.update(sliderOption);
+					glide_2.update(sliderOption);
+					glide_3.update(sliderOption);
+				}, 250);
+			});
+		},
+		load() {
+			this.home();
+			this.allCategories();
+		}
 	},
+	init() {
+		this.common.load();
+		this.pages.load();
+	}
 }
 
-app.common.navTab();
-app.common.menu();
-app.common.intro();
-
-app.home();
-app.allCategories();
+app.init();
