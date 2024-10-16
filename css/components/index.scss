@@ -487,6 +487,10 @@
 		height: 150px;
 		background-size: cover;
 	}
+	
+	@media (min-width: 1800px) {
+		height: 220px;
+	}
 }
 
 .btn-slider {
@@ -638,6 +642,53 @@
 			background: #1B449C;
 			width: 0;
 			transition: .15s;
+		}
+	}
+}
+
+.product-card {
+	border: 2px solid #1B449C;
+	border-radius: 24px;
+	overflow: hidden;
+	background: $light;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	position: relative;
+
+	.image {
+		padding-top: 100%;
+		background: no-repeat center;
+		background-size: cover;
+		border-bottom: 2px solid #1B449C;
+	}
+
+	.content {
+		padding: 18px;
+
+		@media (min-width: 1024px) {
+			padding: 28px;
+		}
+
+		h4 {
+			color: #1B449C;
+
+			@media (min-width: 1024px) {
+				font-size: 24px;
+			}
+		}
+
+		p {
+			font-weight: 600;
+
+			@media (min-width: 1024px) {
+				font-size: 20px;
+			}
+		}
+
+		del {
+			color: $grey1;
 		}
 	}
 }
