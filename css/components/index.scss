@@ -705,3 +705,20 @@
 		}
 	}
 }
+
+.attribute-item {
+	display: inline-block;
+	text-align: center;
+	padding: 4px 16px;
+	border-radius: 8px;
+	border: 1px solid #1B449C;
+	background: $light;
+	cursor: pointer;
+	color: #1B449C;
+	font-weight: 600;
+	
+	&.active {
+		background: #E3EDFF;
+		border-color: #E3EDFF;
+	}
+}

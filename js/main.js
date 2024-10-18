@@ -126,7 +126,7 @@ const app = {
 				updateWhenResize();
 				setTimeout(() => {
 					glide.update(sliderOption);
-				}, 250);
+				}, 400);
 			});
 
 			// product detail
@@ -147,8 +147,8 @@ const app = {
 			}); 
 		},
 		allCategories() {
-			const homePage = template.querySelector('.all-categories-page');
-			if (!homePage) return false;
+			const allCaegoriesPage = template.querySelector('.all-categories-page');
+			if (!allCaegoriesPage) return false;
 
 			let sliderOption = {
 				type: 'carousel',
@@ -183,12 +183,47 @@ const app = {
 					glide_1.update(sliderOption);
 					glide_2.update(sliderOption);
 					glide_3.update(sliderOption);
-				}, 250);
+				}, 400);
+			});
+		},
+		productDetail() {
+			const productDetailPage = template.querySelector('.product-detail-page');
+			if (!productDetailPage) return false;
+
+			let sliderOption = {
+				type: 'carousel',
+				gap: 20,
+				perView: 1,
+				peek: {
+					before: 80,
+					after: 80
+				}
+			}
+
+			function updateWhenResize() {
+				if (window.innerWidth >= 768) {
+					sliderOption.perView = 3;
+					sliderOption.peek = {
+						before: 0,
+						after: 0
+					}
+				}
+			}
+			updateWhenResize();
+			let glide = new Glide('#cate_1', sliderOption);
+			glide.mount();
+
+			window.addEventListener('resize', () => {
+				updateWhenResize();
+				setTimeout(() => {
+					glide.update(sliderOption);
+				}, 400);
 			});
 		},
 		load() {
 			this.home();
 			this.allCategories();
+			this.productDetail();
 		}
 	},
 	init() {
