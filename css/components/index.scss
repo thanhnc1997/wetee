@@ -175,7 +175,8 @@
 				}
 			}
 			
-			&.active {
+			&.active,
+			&.current_page_item {
 				background: #1B449C;
 				color: $light;
 				

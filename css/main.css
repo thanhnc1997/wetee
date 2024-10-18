@@ -681,10 +681,10 @@ hr {
         color: #FFFFFF; }
         .header nav a:hover::after {
           display: block; }
-      .header nav a.active {
+      .header nav a.active, .header nav a.current_page_item {
         background: #1B449C;
         color: #FFFFFF; }
-        .header nav a.active::after {
+        .header nav a.active::after, .header nav a.current_page_item::after {
           display: block; }
   .header .tool-bar {
     display: flex;
