@@ -1401,6 +1401,7 @@ hr {
 .cart-list .cart-item h4 {
   font-size: 22px;
   text-transform: uppercase;
+  max-width: 80%;
 }
 .cart-list .cart-item .price {
   text-align: right;
@@ -1409,6 +1410,7 @@ hr {
 }
 .cart-list .cart-item .content {
   padding: 18px;
+  position: relative;
 }
 .cart-list .cart-item .count {
   display: flex;
@@ -1427,6 +1429,13 @@ hr {
   border-top: 1px solid #1B449C;
   border-bottom: 1px solid #1B449C;
   padding: 2px 16px;
+}
+.cart-list .cart-item .delete {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  border: 0;
+  background: #FFFFFF;
 }
 
 .home-page .hero {

@@ -740,6 +740,7 @@
 		h4 {
 			font-size: 22px;
 			text-transform: uppercase;
+			max-width: 80%;
 		}
 		
 		.price {
@@ -750,6 +751,7 @@
 		
 		.content {
 			padding: 18px;
+			position: relative;
 		}
 		
 		.count {
@@ -771,6 +773,14 @@
 				border-bottom: 1px solid #1B449C;
 				padding: 2px 16px;
 			}
+		}
+		
+		.delete {
+			position: absolute;
+			top: 18px;
+			right: 18px;
+			border: 0;
+			background: $light;
 		}
 	}
 }
