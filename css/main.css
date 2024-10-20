@@ -2606,5 +2606,17 @@ hr {
 .thank-you-page .content .content-body h3 {
   font-size: 30px;
 }
+.thank-you-page a {
+  font-size: 28px;
+  padding: 14px 24px;
+  display: inline-block;
+  background: #1B449C;
+  border-radius: 10px;
+  color: #FFFFFF !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-right: 16px;
+  font-family: "Grandstander", cursive !important;
+}
 
 /*# sourceMappingURL=main.css.map */

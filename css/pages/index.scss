@@ -1201,4 +1201,17 @@
 			}
 		}
 	}
+	
+	a {
+		font-size: 28px;
+		padding: 14px 24px;
+		display: inline-block;
+		background: #1B449C;
+		border-radius: 10px;
+		color: $light !important;
+		font-weight: 600;
+		text-transform: uppercase;
+		margin-right: 16px;
+		font-family: 'Grandstander', cursive !important;
+	}
 }
