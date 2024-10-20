@@ -1395,6 +1395,9 @@ hr {
   color: #1B449C;
   margin-bottom: 24px;
 }
+.cart-list .cart-item:last-child {
+  margin: 0;
+}
 .cart-list .cart-item .image {
   border-right: 1px solid #1B449C;
 }
@@ -1404,7 +1407,6 @@ hr {
   max-width: 80%;
 }
 .cart-list .cart-item .price {
-  text-align: right;
   font-weight: 600;
   font-size: 24px;
 }
@@ -1436,6 +1438,20 @@ hr {
   right: 18px;
   border: 0;
   background: #FFFFFF;
+}
+.cart-list .cart-item p {
+  line-height: 1.2;
+}
+
+.multiple-choices-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #1B449C;
+  border-radius: 10px;
+  padding: 12px 16px;
+}
+.multiple-choices-item input[type=radio] {
+  margin-right: 14px;
 }
 
 .home-page .hero {
@@ -2456,6 +2472,77 @@ hr {
 }
 .cart-page .payment-section .btn-payment img {
   margin-right: 14px;
+}
+
+.checkout-page {
+  padding: 40px 0 180px;
+}
+@media (min-width: 1024px) {
+  .checkout-page {
+    padding: 80px 0 250px;
+  }
+}
+.checkout-page .grid.main-grid {
+  grid-gap: 60px;
+  align-items: self-start;
+}
+@media (min-width: 1280px) {
+  .checkout-page .grid.main-grid {
+    grid-template: auto/60% 1fr;
+  }
+}
+.checkout-page .form .grid {
+  grid-gap: 16px;
+}
+.checkout-page .form .input,
+.checkout-page .form .select {
+  border: 1px solid #1B449C;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+}
+.checkout-page .cart-information {
+  color: #1B449C;
+  border: 1px solid #1B449C;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #BBD2FF;
+  display: flex;
+  flex-direction: column;
+}
+.checkout-page .cart-information .cart-header {
+  padding: 20px;
+}
+.checkout-page .cart-information .cart-header h3 {
+  font-size: 36px;
+  line-height: 1;
+}
+.checkout-page .cart-information .cart-body {
+  border-top: 1px solid #1B449C;
+  border-radius: 20px 20px 0 0;
+  padding: 20px;
+  background: #FFFFFF;
+}
+.checkout-page .cart-information hr {
+  margin-bottom: 24px;
+}
+.checkout-page .cart-information .cart-item * {
+  font-size: 16px;
+}
+.checkout-page .total {
+  font-size: 20px;
+}
+@media (min-width: 768px) {
+  .checkout-page .total {
+    font-size: 24px;
+  }
+}
+.checkout-page .btn {
+  width: 100%;
+  font-size: 22px;
+  background: #1B449C;
+  color: #FFFFFF;
 }
 
 /*# sourceMappingURL=main.css.map */

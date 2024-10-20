@@ -34,45 +34,92 @@
 			<button class="btn nav-trigger"></button>
 		</div>
 	</header>
-	<main class="cart-page">
+	<main class="checkout-page">
 		<div class="container">
-			<h2 class="section-title" style="text-align: left">Giỏ hàng của bạn</h2>
-			<h4 class="mb-18" style="color: #1B449C;">TỔNG CỘNG (2 sản phẩm) 0.000.000đ</h4>
-			<div class="grid grid-md-2">
-				<ul class="cart-list">
-					<li class="cart-item">
-						<div class="image"></div>
-						<div class="content">
-							<h4 class="mb-4 granstander-font">Xịt vệ sinh răng miệng Safeformula Infant</h4>
-							<p class="mb-14">Thể tích 30ml</p>
-							<button class="delete"><img src="images/icons/close.svg"></button>
-							<div class="d-flex align-items-center justify-content-between">
-								<div class="count">
-									<button>-</button>
-									<span>1</span>
-									<button>+</button>
-								</div>
-								
-								<p class="price text-pink">100.000đ</p>
-							</div>
+			<h2 class="section-title" style="text-align: left">Thanh toán</h2>
+			<h4 class="mb-18" style="color: #1B449C;">Thông tin giao hàng</h4>
+			<div class="grid main-grid">
+				<form class="form">
+					<div class="mb-14">
+						<span class="d-block mb-4">Họ và tên</span>
+						<input class="input" type="text" placeholder="Họ và tên">
+					</div>
+					<div class="grid grid-md-2 mb-14">
+						<div>
+							<span class="d-block mb-4">Email</span>
+							<input class="input" type="text" placeholder="Nhập email của bạn">
 						</div>
-					</li>
-				</ul>
-				
-				<div class="payment-section">
-					<h3 class="text-uppercase mb-18" style="color: #1B449C;">Thông tin đơn hàng</h3>
-					
-					<a href="#" class="btn-payment mb-18">
-						<img src="images/icons/purchase.svg">
-						<span>Thanh toán ngay</span>
-					</a>
-					
-					<a class="d-flex align-items-center" href="#">
-						<img class="mr-8" src="images/icons/return.svg">
-						<u><b>Tiếp tục mua hàng</b></u>
-					</a>
+						<div>
+							<span class="d-block mb-4">SĐT</span>
+							<input class="input" type="text" placeholder="Nhập SĐT của bạn">
+						</div>
+					</div>
+					<div class="mb-14">
+						<span class="d-block mb-4">Số nhà, tên đường</span>
+						<input class="input" type="text" placeholder="Nhập số nhà, tên đường">
+					</div>
+					<div class="grid grid-md-3 mb-14">
+						<div>
+							<span class="d-block mb-4">Thành phố</span>
+							<select name="city" class="select">
+								<option value="">Chọn thành phố</option>
+							</select>
+						</div>
+						<div>
+							<span class="d-block mb-4">Quận/Huyện</span>
+							<select name="district" class="select">
+								<option value="">Chọn quận huyện</option>
+							</select>
+						</div>
+						<div>
+							<span class="d-block mb-4">Phường/Xã</span>
+							<select name="ward" class="select" >
+								<option value="">Chọn phường xã</option>
+							</select>
+						</div>
+					</div>
+					<div class="mb-14">
+						<span class="d-block mb-4">Phương thức vận chuyển</span>
+						<div class="multiple-choices-item">
+							<input type="radio" checked>
+							<span>Giao hàng tận nơi</span>
+						</div>
+					</div>
+					<div class="mb-14">
+						<span class="d-block mb-4">Phương thức thanh toán</span>
+						<div class="multiple-choices-item">
+							<input type="radio" checked>
+							<span>COD (Thanh toán khi nhận hàng)</span>
+						</div>
+					</div>
+					<button class="btn"><span class="granstander-font text-uppercase">Hoàn tất</span></button>
+				</form>
+				<div class="cart-information">
+					<div class="cart-header">
+						<h3>Đơn hàng của bạn</h3>
+						<a href="#"><u>Chỉnh sửa đơn hàng</u></a>
+					</div>
+					<dvi class="cart-body">
+						<div class="total d-flex align-items-center justify-content-between">
+							<b>Tổng</b>
+							<b class="text-pink">100.000đ</b>
+						</div>
+						<hr>
+						<ul class="cart-list">
+							<li class="cart-item">
+								<div class="image"></div>
+								<div class="content">
+									<h4 class="mb-4 granstander-font">Xịt vệ sinh răng miệng Safeformula Infant</h4>
+									<p>Thể tích 30ml</p>
+									<p>Số lượng 1</p>
+									<p class="price text-pink">100.000đ</p>
+								</div>
+							</li>
+						</ul>
+					</dvi>
 				</div>
 			</div>
+			
 		</div>
 	</main>
 	<footer class="footer">

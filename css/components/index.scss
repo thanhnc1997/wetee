@@ -732,6 +732,10 @@
 		color: #1B449C;
 		margin-bottom: 24px;
 		
+		&:last-child {
+			margin: 0;
+		}
+		
 		.image {
 			// padding-top: calc(9 / 16 * 100%);
 			border-right: 1px solid #1B449C;
@@ -744,7 +748,6 @@
 		}
 		
 		.price {
-			text-align: right;
 			font-weight: 600;
 			font-size: 24px;
 		}
@@ -782,5 +785,21 @@
 			border: 0;
 			background: $light;
 		}
+		
+		p {
+			line-height: 1.2;
+		}
+	}
+}
+
+.multiple-choices-item {
+	display: flex;
+	align-items: center;
+	border: 1px solid #1B449C;
+	border-radius: 10px;
+	padding: 12px 16px;
+	
+	input[type="radio"] {
+		margin-right: 14px;
 	}
 }
