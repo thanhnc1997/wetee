@@ -752,9 +752,22 @@
 		}
 		
 		h4 {
-			font-size: 22px;
+			font-size: 15px;
+			max-width: 90%;
 			text-transform: uppercase;
-			max-width: 80%;
+			
+			@media (min-width: 1024px) {
+				font-size: 22px;
+				max-width: 80%;
+			}
+		}
+		
+		.d-flex.align-items-center {
+			justify-content: flex-start;
+			
+			@media (min-width: 1024px) {
+				justify-content: space-between;
+			}
 		}
 		
 		.price {
@@ -771,8 +784,8 @@
 			display: flex;
 			
 			button {
-				width: 32px;
-				height: 32px;
+				width: 34px;
+				height: 34px;
 				border: 1px solid #1B449C;
 				background: $light;
 				text-align: center;
@@ -824,4 +837,8 @@
 	text-transform: uppercase;
 	display: block;
 	margin-right: 16px;
+}
+
+.woocommerce-notices-wrapper {
+	display: none !important;
 }
