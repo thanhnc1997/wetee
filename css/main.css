@@ -830,6 +830,13 @@ hr {
     margin: 0 4px;
   }
 }
+.header nav li.current_page_item a {
+  background: #1B449C;
+  color: #FFFFFF;
+}
+.header nav li.current_page_item a::after {
+  display: block;
+}
 .header nav a {
   display: block;
   text-align: center;
@@ -888,11 +895,11 @@ hr {
 .header nav a:hover::after {
   display: block;
 }
-.header nav a.active, .header nav a.current_page_item {
+.header nav a.active {
   background: #1B449C;
   color: #FFFFFF;
 }
-.header nav a.active::after, .header nav a.current_page_item::after {
+.header nav a.active::after {
   display: block;
 }
 .header .tool-bar {

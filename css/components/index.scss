@@ -116,6 +116,17 @@
 			@media (min-width: 1400px) {
 				margin: 0 4px;
 			}
+			
+			&.current_page_item {
+				a {
+					background: #1B449C;
+					color: $light;
+
+					&::after {
+						display: block;
+					}
+				}
+			}
 		}
 		
 		a {
@@ -175,8 +186,7 @@
 				}
 			}
 			
-			&.active,
-			&.current_page_item {
+			&.active {
 				background: #1B449C;
 				color: $light;
 				
