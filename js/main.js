@@ -226,21 +226,6 @@ const app = {
 			let citySelection = checkOutPage.querySelector('select[name="city"]');
 			let districtSelection = checkOutPage.querySelector('select[name="district"]');
 			let wardSelection = checkOutPage.querySelector('select[name="ward"]');
-			
-			async function renderAddress() {
-				let response = await fetch('https://vapi.vnappmob.com/api/province');
-				let data = await response.json();
-				
-				for (let city of data) {
-					let option = document.createElement('option');
-					option.innerHTML = city.province_name;
-					option.setAttribute('value', city.province_id);
-					
-					citySelection.appendChild(option);
-				}
-			}
-			
-			renderAddress();
 		},
 		load() {
 			this.home();
