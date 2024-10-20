@@ -2271,11 +2271,8 @@ hr {
 .category-page .hero .hero-title-image {
   position: relative;
   order: 0;
-}
-@media (min-width: 768px) {
-  .category-page .hero .hero-title-image {
-    width: 60%;
-  }
+  text-align: center;
+  width: 60%;
 }
 @media (min-width: 820px) {
   .category-page .hero .hero-title-image {
@@ -2294,7 +2291,7 @@ hr {
   width: 100%;
 }
 .category-page .products {
-  padding: 40px 0 80px;
+  padding: 40px 0 180px;
 }
 @media (min-width: 1024px) {
   .category-page .products {

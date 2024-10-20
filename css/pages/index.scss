@@ -804,10 +804,8 @@
 		.hero-title-image {
 			position: relative;
 			order: 0;
-			
-			@media (min-width: 768px) {
-				width: 60%;
-			}
+			text-align: center;
+			width: 60%;
 			
 			@media (min-width: 820px) {
 				width: 70%;
@@ -827,7 +825,7 @@
 	}
 	
 	.products {
-		padding: 40px 0 80px;
+		padding: 40px 0 180px;
 		
 		@media (min-width: 1024px) {
 			padding: 80px 0 340px;
