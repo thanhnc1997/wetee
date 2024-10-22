@@ -201,6 +201,13 @@ const app = {
 			}
 
 			function updateWhenResize() {
+				if (window.innerWidth < 768) {
+					sliderOption.peek = {
+						before: 80,
+						after: 80
+					}
+				}
+				
 				if (window.innerWidth >= 768) {
 					sliderOption.perView = 3;
 					sliderOption.peek = {
