@@ -2014,4 +2014,73 @@ hr {
     margin-right: 16px;
     font-family: 'Grandstander', cursive !important; }
 
+.blog-page .hero {
+  padding: 60px 0 240px;
+  background: #BBD2FF;
+  position: relative; }
+  .blog-page .hero .grid {
+    grid-gap: 28px; }
+    @media (min-width: 1140px) {
+      .blog-page .hero .grid {
+        grid-gap: 60px;
+        grid-template: auto / 60% 1fr; } }
+  .blog-page .hero .image {
+    padding-top: calc(9 / 16 * 100%);
+    background: #FFFFFF no-repeat center;
+    background-size: cover;
+    border-radius: 20px; }
+  .blog-page .hero .content {
+    display: flex;
+    flex-direction: column;
+    color: #1B449C; }
+    .blog-page .hero .content h3 {
+      font-size: 48px;
+      line-height: 1.2; }
+    .blog-page .hero .content p {
+      margin-bottom: auto; }
+    .blog-page .hero .content .btn {
+      width: 100%;
+      font-size: 24px;
+      background: #FFFFFF;
+      padding: 14px; }
+  @media (min-width: 768px) {
+    .blog-page .hero .wave-tail {
+      height: 120px;
+      background-size: cover; } }
+  @media (min-width: 1024px) {
+    .blog-page .hero .wave-tail {
+      height: 210px;
+      background-size: cover; } }
+  @media (min-width: 1320px) {
+    .blog-page .hero .wave-tail {
+      height: 160px;
+      background-size: cover; } }
+  @media (min-width: 1800px) {
+    .blog-page .hero .wave-tail {
+      height: 220px; } }
+.blog-page .articles {
+  padding: 20px 0 250px; }
+  .blog-page .articles .section-title {
+    margin-bottom: 32px; }
+    @media (min-width: 1024px) {
+      .blog-page .articles .section-title {
+        margin-bottom: 60px; } }
+  .blog-page .articles .grid {
+    grid-gap: 14px; }
+    @media (min-width: 1024px) {
+      .blog-page .articles .grid {
+        grid-gap: 20px; } }
+  .blog-page .articles article {
+    border: 1px solid #1B449C;
+    border-radius: 10px;
+    overflow: hidden; }
+    .blog-page .articles article .image {
+      padding-top: calc(9 / 16 * 100%);
+      background: #FFFFFF no-repeat center;
+      background-size: cover;
+      border-radius: 0 0 10px 10px;
+      border-bottom: 1px solid #1B449C; }
+    .blog-page .articles article .content {
+      padding: 18px; }
+
 /*# sourceMappingURL=main.css.map */
