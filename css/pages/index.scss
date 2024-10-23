@@ -1199,7 +1199,7 @@
 		flex-direction: column;
 		
 		.content-header {
-			padding: 20px;
+			padding: 40px 20px 28;
 			
 			h3 {
 				font-size: 36px;
@@ -1212,9 +1212,10 @@
 			border-radius: 20px 20px 0 0;
 			padding: 20px;
 			background: $light;
+			font-weight: 500;
 			
 			@media (min-width: 1024px) {
-				padding: 20px 40px;
+				padding: 20px 60px;
 			} 
 			
 			h3 {
