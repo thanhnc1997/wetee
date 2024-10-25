@@ -234,11 +234,50 @@ const app = {
 			let districtSelection = checkOutPage.querySelector('select[name="district"]');
 			let wardSelection = checkOutPage.querySelector('select[name="ward"]');
 		},
+		blogDetailPage() {
+			let sliderOption = {
+				type: 'carousel',
+				gap: 20,
+				perView: 1,
+				peek: {
+					before: 80,
+					after: 80
+				}
+			}
+
+			function updateWhenResize() {
+				if (window.innerWidth < 768) {
+					sliderOption.peek = {
+						before: 80,
+						after: 80
+					}
+				}
+				
+				if (window.innerWidth >= 768) {
+					sliderOption.perView = 3;
+					sliderOption.peek = {
+						before: 0,
+						after: 0
+					}
+				}
+			}
+			updateWhenResize();
+			let glide = new Glide('#cate_1', sliderOption);
+			glide.mount();
+
+			window.addEventListener('resize', () => {
+				updateWhenResize();
+				setTimeout(() => {
+					glide.update(sliderOption);
+				}, 400);
+			});
+		},
 		load() {
 			this.home();
 			this.allCategories();
 			this.productDetail();
 			this.checkOutPage();
+			this.blogDetailPage();
 		}
 	},
 	init() {
