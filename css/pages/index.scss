@@ -143,7 +143,7 @@
 				flex: 0 0 100%;
 				margin: 0 auto 28px;
 				border-radius: 20px;
-				border: 2.5px solid #1B449C;;
+				border: 2.5px solid #1B449C;
 				overflow: hidden;
 				
 				@media (min-width: 1024px) {
@@ -688,7 +688,8 @@
 		}
 		
 		&.pink {
-			background-color: #F285A8;
+			background: #FFB8CF url(../images/common/bg_cate1.png) no-repeat center;
+			background-size: cover;
 			padding: 100px 0 80px;
 			
 			@media (min-width: 1024px) {
@@ -697,11 +698,13 @@
 		}
 
 		&.green {
-			background-color: #D5EC53;
+			background: #D5EC53 url(../images/common/bg_cate2.png) no-repeat center;
+			background-size: cover;
 		}
 
 		&.yellow {
-			background-color: #FFD845;
+			background: #FFD845 url(../images/common/bg_cate3.png) no-repeat center;
+			background-size: cover;
 			padding: 40px 0 140px;
 			
 			@media (min-width: 1024px) {
@@ -1200,7 +1203,7 @@
 		flex-direction: column;
 		
 		.content-header {
-			padding: 40px 20px 28;
+			padding: 40px 20px 28px;
 			
 			h3 {
 				font-size: 36px;
@@ -1377,7 +1380,7 @@
 		
 		.container {
 			@media (min-width: 1140px) {
-				max-width: 70%;
+				max-width: 80%;
 			}
 		}
 
@@ -1413,5 +1416,75 @@
 	
 	.related-articles {
 		padding: 0 0 250px;
+	}
+}
+
+.about-page {
+	h3 {
+		font-size: 32px;
+		margin-bottom: 18px;
+		color: #1B449C;
+		text-transform: uppercase;
+
+		@media (min-width: 1024px) {
+			font-size: 48px;
+		}
+	}
+	
+	.hero {
+		padding: 60px 0 250px;
+		position: relative;
+		
+		.section-title {
+			margin-bottom: 40px;
+		}
+		
+		.desc {
+			margin: 0 auto 18px;
+			line-height: 1.2;
+			font-weight: 600;
+			color: #1B449C;
+			
+			@media (min-width: 1024px) {
+				max-width: 440px;
+				font-size: 20px;
+			}
+			
+			span {
+				line-height: 1.2;
+			}
+		}
+		
+		.about-bunny {
+			position: absolute;
+			z-index: 1;
+			bottom: 0;
+			left: 40%;
+			
+			@media (min-width: 1024px) {
+				left: 70%;
+			}
+		}
+		
+		.wave-tail {
+			bottom: -10px;
+			left: 0;
+			background: none;
+			height: auto;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.about-1 {
+		padding: 60px 0;
+		background: #B6CFFF;
+		
+		.wrapper {
+			background: $light;
+			border-radius: 20px;
+			border: 1px solid #1B449C;
+		}
 	}
 }
