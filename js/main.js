@@ -235,6 +235,9 @@ const app = {
 			let wardSelection = checkOutPage.querySelector('select[name="ward"]');
 		},
 		blogDetailPage() {
+			const aboutPage = template.querySelector('.blog-detail-page');
+			if (!aboutPage) return false; 
+			
 			let sliderOption = {
 				type: 'carousel',
 				gap: 20,
@@ -272,12 +275,63 @@ const app = {
 				}, 400);
 			});
 		},
+		aboutPage() {
+			const aboutPage = template.querySelector('.about-page');
+			if (!aboutPage) return false;
+			
+			let sliderOption = {
+				type: 'carousel',
+				gap: 20,
+				perView: 1,
+				peek: {
+					before: 80,
+					after: 80
+				}
+			}
+
+			function updateWhenResize() {
+				if (window.innerWidth >= 768) {
+					sliderOption.perView = 2;
+					sliderOption.peek = {
+						before: 150,
+						after: 150
+					}
+				}
+
+				if (window.innerWidth >= 1280) {
+					sliderOption.perView = 3;
+					sliderOption.peek = {
+						before: 150,
+						after: 150
+					}
+				}
+
+				if (window.innerWidth >= 1800) {
+					sliderOption.perView = 5;
+					sliderOption.peek = {
+						before: 150,
+						after: 150
+					}
+				}
+			}
+			updateWhenResize();
+
+			let glide = new Glide('#papers', sliderOption);
+			glide.mount();
+			window.addEventListener('resize', () => {
+				updateWhenResize();
+				setTimeout(() => {
+					glide.update(sliderOption);
+				}, 400);
+			});
+		},
 		load() {
 			this.home();
 			this.allCategories();
 			this.productDetail();
 			this.checkOutPage();
 			this.blogDetailPage();
+			this.aboutPage();
 		}
 	},
 	init() {
