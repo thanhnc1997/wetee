@@ -1481,10 +1481,32 @@
 		}
 	}
 	.about-1 {
-		padding: 80px 0 240px;
+		padding: 80px 0 140px;
 		background: #BBD2FF url(../images/common/circle_mobile.png) no-repeat top center;
 		background-size: cover;
 		position: relative;
+		
+		@media (min-width: 1024px) {
+			padding: 80px 0 240px;
+		}
+		
+		@media (min-width: 1800px) {
+			padding: 80px 0 340px;
+		}
+		
+		.overflow-auto {
+			&::-webkit-scrollbar {
+				display: none;
+			}
+		}
+		
+		.container {
+			padding: 0;
+
+			@media (min-width: 1024px) {
+				padding: 0 16px;
+			} 
+		}
 		
 		h3 {
 			padding-right: 25%;
@@ -1521,7 +1543,12 @@
 		}
 		
 		.grid.grid-md-3 {
-			grid-gap: 40px;
+			display: flex;
+			
+			@media (min-width: 1024px) {
+				display: grid;
+				grid-gap: 40px;
+			}
 			
 			.item {
 				border-radius: 20px;
@@ -1529,6 +1556,14 @@
 				overflow: hidden;
 				display: flex;
 				flex-direction: column;
+				margin-right: 16px;
+				flex: 0 0 300px;
+				max-width: 300px;
+				
+				@media (min-width: 1024px) {
+					max-width: none;
+					margin: 0;
+				}
 				
 				&.pink {
 					background: #F285A8;
@@ -1651,7 +1686,15 @@
 	
 	.about-3 {
 		background: #BBD2FF;
-		padding: 180px 0 60px;
+		padding: 10p0x 0 20px;
+		
+		@media (min-width: 1024px) {
+			padding: 180px 0 60px;
+		}
+		
+		@media (min-width: 1800px) {
+			padding: 280px 0 60px;
+		}
 		
 		h3 {
 			margin-bottom: 40px;
